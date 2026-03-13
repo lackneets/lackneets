@@ -1,0 +1,689 @@
+@import url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+@import url('../vendor/fontello/css/lc-icons.css');
+@import url('animate.css');
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-MoFoq92mQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url(http://fonts.gstatic.com/s/alegreyasans/v26/5aUu9_-1phKLFgshYDvh6Vwt5fFPqEp2jg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/alegreyasans/v26/5aUz9_-1phKLFgshYDvh6Vwt7VptuA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url(http://fonts.gstatic.com/s/alegreyasans/v26/5aUu9_-1phKLFgshYDvh6Vwt5alOqEp2jg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Droid Sans Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/droidsansmono/v21/6NUO8FuJNQ2MbkrZ5-J8lKFrp7pRef2u.ttf) format('truetype');
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font: 16px/25px "Whitney HTF", Whitney, "Alegreya Sans", Lato, sans-serif;
+}
+.noselect,
+body .main-header .background-glass img,
+body .main-header .background-glass canvas,
+body .main-header .sign img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.font-lora-italic,
+body .main-header .sign {
+  font-family: Lora, serif;
+  font-style: italic;
+}
+.full-view {
+  height: 100vh;
+}
+.fill-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.fixed-view {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.radius-bg {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(100, 100, 100, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(100, 100, 100, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(100, 100, 100, 0.85) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.glowlight {
+  -webkit-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -moz-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -ms-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+}
+.horizontal-bg,
+body .main-header .social-links {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+50,000000+100&0+0,0.2+20,0.35+50,0.2+80,0+100 */
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.35) 50%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#00000000', GradientType=1);
+  /* IE6-9 */
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+body a:focus,
+body a:hover {
+  color: white;
+  text-decoration: none;
+}
+body a[href] {
+  color: #ffd;
+}
+body a[href]:focus,
+body a[href]:hover {
+  color: white;
+  text-shadow: 0 0 2px #FFF;
+  text-decoration: none;
+}
+body #fpsmeter {
+  transform: scale(0.6);
+  transform-origin: right top;
+  position: fixed;
+  top: 0.25em;
+  right: 0.5em;
+  left: auto;
+  z-index: 9999;
+  opacity: 0.5;
+  width: 100px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+body .main-header {
+  position: relative;
+}
+body .main-header .background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-filter: blur(1.5px);
+  -moz-filter: blur(1.5px);
+  -ms-filter: blur(1.5px);
+  filter: blur(1.5px);
+  bottom: -40px;
+  background: url(//c2.staticflickr.com/6/5747/20783861346_e49c9e63af_b.jpg) center;
+  background-size: cover;
+}
+body .main-header .background:before {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.5;
+  content: " ";
+  display: block;
+}
+body .main-header .background-copyright:after {
+  content: "© 2016 Lackneets";
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+body .main-header .background-stage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+body .main-header .background-stage canvas#lighting {
+  opacity: 0.2;
+}
+body .main-header .background-stage .plane {
+  min-width: 40px;
+  min-height: 40px;
+  width: 3vw;
+  height: 3vw;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+}
+body .main-header .background-stage .plane:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-filter: brightness(0.8) sepia(0.2);
+  -moz-filter: brightness(0.8) sepia(0.2);
+  -ms-filter: brightness(0.8) sepia(0.2);
+  filter: brightness(0.8) sepia(0.2);
+  content: ' ';
+  display: block;
+  background: url(../images/plane-br.png) no-repeat top right;
+  background-size: contain;
+}
+body .main-header .background-stage .plane:after {
+  -webkit-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -moz-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -ms-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  content: ' ';
+  width: 2px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: blink-light 1.5s infinite;
+}
+body .main-header .background-glass canvas {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+body .main-header iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-filter: blur(1.5px) sepia(0.2);
+  -moz-filter: blur(1.5px) sepia(0.2);
+  -ms-filter: blur(1.5px) sepia(0.2);
+  filter: blur(1.5px) sepia(0.2);
+  border: none;
+  width: 130%;
+  height: 180vh;
+  margin-top: -40vh;
+}
+body .main-header .sign {
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+}
+body .main-header .sign img {
+  -webkit-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -moz-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -ms-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  width: 250px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+body .main-header .sign h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  text-align: center;
+  margin: 0;
+  color: transparent;
+}
+body .main-header .sign h3 {
+  color: #333;
+  line-height: 1.5em;
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+body .main-header .social-links {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  bottom: 20%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 1px 2px rgba(100, 100, 100, 0.2) inset;
+}
+body .main-header .social-links a {
+  position: relative;
+  color: white;
+  font-size: 1.6em;
+  opacity: 0.6;
+  text-decoration: none;
+  margin: 0.3em;
+}
+body .main-header .social-links a:hover {
+  opacity: 1;
+}
+body .main-header .social-links a:hover span {
+  animation: fadeInUp 1s;
+  display: block;
+}
+body .main-header .social-links a span {
+  font-family: Lora, serif;
+  font-style: italic;
+  display: none;
+  color: #FFF;
+  font-size: 0.6em;
+  position: absolute;
+  left: 50%;
+  top: -30px;
+  margin-left: -50px;
+  text-align: center;
+  width: 100px;
+}
+body .main-container {
+  box-shadow: -2px 0 8px 1px #333;
+  background: linear-gradient(20deg, #60716c, #9aa193 75%, #9aa193) fixed;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+body table.table-works th,
+body table.table-works td {
+  border: none;
+  vertical-align: middle;
+}
+body table.table-works th:nth-child(n+2),
+body table.table-works td:nth-child(n+2) {
+  text-align: center;
+}
+body table.table-works th {
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+body table.table-works tr:nth-child(odd) td {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+body table.table-works small:nth-child(n+2) {
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid rgba(200, 200, 200, 0.3);
+}
+body .experience-list {
+  font: 13px/25px Arial, sans-serif;
+}
+body .experience-list a {
+  border-bottom: 1px dotted rgba(255, 255, 180, 0.5);
+}
+body .experience-list .row .time {
+  padding: 10px 15px;
+}
+body .experience-list .row .time:after {
+  content: ' ';
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  right: 32px;
+  top: 15px;
+}
+body .experience-list .row .job {
+  padding: 10px 15px;
+}
+body .experience-list .row .job:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: -40px;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+body .experience-list .row:first-child .time:after {
+  -webkit-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -moz-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  -ms-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  background-color: white;
+}
+body .experience-list .row:first-child .time:after {
+  animation: glow-pulse 1.5s infinite;
+}
+body .experience-list .row:nth-child(even) {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+body .experience-list .row small {
+  opacity: 0.6;
+}
+body section {
+  margin: 40px auto;
+}
+body footer {
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+body footer a,
+body footer a:hover,
+body footer a:visited,
+body footer a:focus {
+  color: rgba(255, 255, 255, 0.4);
+}
+section.contact {
+  background: orange;
+}
+/* Structure */
+body .loading-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  z-index: 10000;
+}
+body .loading-mask > div {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -20px;
+}
+body .main-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  z-index: 1;
+}
+body .main-container {
+  position: relative;
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+  margin-top: 100vh;
+}
+body footer {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+body.init .loading-mask {
+  opacity: 0;
+  background-color: #333;
+  pointer-events: none;
+}
+body.init .loading-mask .spinner {
+  display: none;
+}
+/* Animations */
+body .loading-mask {
+  transition: opacity 1.5s 0.5s, background 0.5s;
+}
+body .background {
+  -webkit-transition: -webkit-filter 0.5s;
+  -moz-transition: -moz-filter 0.5s;
+  -o-transition: filter 0.5s;
+  transition: -webkit-filter 0.5s,-moz-filter 0.5s,-o-filter 0.5s,filter 0.5s;
+}
+body .sign {
+  transform: translateY(0vh) scale(1) !important;
+  opacity: 1;
+  transition: transform 1s, opacity 0.5s;
+}
+body.skip-hero .main-header .background {
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+body.skip-hero .main-header .background-stage,
+body.skip-hero .main-header .background-stage {
+  -webkit-filter: blur(1.8px);
+  -moz-filter: blur(1.8px);
+  -ms-filter: blur(1.8px);
+  filter: blur(1.8px);
+}
+body.skip-hero .background-glass .raindrop,
+body.skip-hero .background-glass canvas {
+  -webkit-filter: blur(0.8px);
+  -moz-filter: blur(0.8px);
+  -ms-filter: blur(0.8px);
+  filter: blur(0.8px);
+}
+body.skip-hero .background-copyright {
+  opacity: 0;
+}
+body.skip-hero .sign {
+  transform: translateY(-5vh) scale(0.8) !important;
+  opacity: 0;
+}
+body.skip-hero .social-links {
+  opacity: 0;
+}
+body.init .sign {
+  animation: fadeIn 2s 1s backwards;
+}
+body.init .sign h3 {
+  animation: fadeInDown 1s 2s backwards;
+}
+body.init .plane {
+  animation: airplane 40s infinite cubic-bezier(0.2, 0.36, 0, 0.65);
+}
+body.plane-br .background-stage .plane:before {
+  background-image: url(../images/plane-br.png) !important;
+}
+body.plane-ci .background-stage .plane:before {
+  background-image: url(../images/plane-ci.png) !important;
+}
+body.plane-mm .background-stage .plane:before {
+  background-image: url(../images/plane-mm.png) !important;
+  transform: rotate(8deg) translate(-8%, -2%);
+}
+body.plane-mm2 .background-stage .plane:before {
+  background-image: url(../images/plane-mm-1.png) !important;
+}
+/* For slow browsers */
+html.slow-performance .main-header .background-stage,
+html.slow-performance .main-header .background-stage {
+  -webkit-filter: none !important;
+  -moz-filter: none !important;
+  -ms-filter: none !important;
+  filter: none !important;
+}
+html.slow-performance .background,
+html.slow-performance .background-glass canvas,
+html.slow-performance .background-glass .raindrop {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+html.slow-performance .background-glass canvas,
+html.slow-performance .background-glass .raindrop {
+  -webkit-filter: none !important;
+  -moz-filter: none !important;
+  -ms-filter: none !important;
+  filter: none !important;
+}
+/* IE Fallback */
+html.ie8 .loading-mask .spinner,
+html.ie9 .loading-mask .spinner {
+  display: none;
+}
+html.ie8 .background-stage,
+html.ie9 .background-stage {
+  display: none !important;
+}
+html.ie8 .social-links,
+html.ie9 .social-links {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+html.ie8 body * {
+  display: none !important;
+}
+html.ie8 body:before {
+  content: "OOPS!!";
+  font-size: 80px;
+  line-height: 120px;
+  display: block;
+  padding: 10px 20px;
+}
+html.ie8 body:after {
+  content: "Update your browser!";
+  font-size: 60px;
+  line-height: 120px;
+  padding: 10px 20px;
+}
+/* Mobile */
+@media screen and (max-width: 360px) {
+  body .social-links a {
+    font-size: 1.2em !important;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 450px) {
+  body .background,
+  body .background-glass {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+  body .raindrops {
+    display: none !important;
+  }
+  body .background-glass {
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    -ms-filter: none !important;
+    filter: none !important;
+  }
+  body .cloud {
+    display: none !important;
+  }
+}
+@keyframes airplane {
+  0%,
+  10% {
+    transform: perspective(500px) rotate(10deg) translate3d(30vw, 40vh, 0) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(500px) rotate(0deg) translate3d(-100vw, 15vh, -200px) scale(0.1, 0.2);
+    opacity: 0.1;
+  }
+}
+@keyframes blink-light {
+  0%,
+  40% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+@keyframes glow-pulse {
+  0% {
+    -webkit-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0));
+    -moz-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0));
+    -ms-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0));
+    filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0));
+  }
+  5% {
+    -webkit-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+    -moz-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+    -ms-filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  }
+  95%,
+  100% {
+    -webkit-filter: drop-shadow(0 0px 20px transparent);
+    -moz-filter: drop-shadow(0 0px 20px transparent);
+    -ms-filter: drop-shadow(0 0px 20px transparent);
+    filter: drop-shadow(0 0px 20px transparent);
+  }
+}
+/* Themes */
+body.theme-night .main-header .background {
+  background-image: url(//c1.staticflickr.com/1/748/20187533514_09ca5b0575_b.jpg);
+}
+body.theme-night .background-copyright:after {
+  content: "Sunset of Taipei © 2016 Lackneets";
+  color: rgba(255, 255, 255, 0.4);
+}
+body.theme-night .main-header .sign h3 {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+body.theme-night .main-container {
+  background-color: #495158;
+  background-image: linear-gradient(20deg, #192831, #495158 75%, #3a3736);
+}
+/** Spinner **/
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+  }
+}

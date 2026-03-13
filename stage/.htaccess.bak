@@ -1,0 +1,53 @@
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteOptions inherit
+
+  # %{ENV:BASE} is current url path
+  # See http://stackoverflow.com/questions/21062290/set-rewritebase-to-the-current-folder-path-dynamically
+  RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+  RewriteRule ^(.*)$ - [E=BASE:%1]
+
+  # # xxx.png => xxx-min.png if exists
+  RewriteCond %{DOCUMENT_ROOT}%{ENV:BASE}$1-min.$2 -f
+  RewriteRule ^(.*)\.(png|jpg)$ %{ENV:BASE}$1-min.$2
+
+  # www.lackneets.tw => lackneets.tw
+  RewriteCond %{HTTP_HOST}  ^www.lackneets.tw [nocase]
+  RewriteRule ^(.*)$        http://lackneets.tw$1 [last,redirect=301]
+
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase / 
+
+  RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+  RewriteRule ^(.*)$ - [E=BASE:%1]
+
+  # .../xxx.png => minified/.../xxx.png if exists
+  RewriteCond %{DOCUMENT_ROOT}%{ENV:BASE}minified/$1 -f
+  RewriteRule (.*) %{ENV:BASE}minified/$1 [QSA,L]
+
+  # .../xxx.png => .../xxx-min.png if exists
+  # RewriteCond %{DOCUMENT_ROOT}%{ENV:BASE}$1min/$2-min.$3 -f
+  # RewriteRule ^(.*\/)(.*)\.(png|jpg)$ %{ENV:BASE}$1min/$2-min.$3 [L]
+  
+  # Dont apply if filename match -min.png
+  RewriteCond %{REQUEST_FILENAME} !minified/
+  RewriteCond %{REQUEST_FILENAME} !-min.png$
+  RewriteRule ^(.*\.png)$ %{ENV:BASE}pngquant.php [QSA,L]
+
+  # Not allowed access any php except pngquant.php, redirect to index.php
+  # RewriteCond %{REQUEST_FILENAME} .php$
+  # RewriteCond %{REQUEST_FILENAME} !pngquant.php$
+  # RewriteRule ^ index.php [L,NC]
+
+  # RewriteOptions Inherit
+
+  # RewriteCond %{REQUEST_URI} !\.png$
+  # RewriteRule ^ index.php [L,NC]
+
+</IfModule>

@@ -1,0 +1,106 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "72109d2fb3088d0e66ea6a9204297651",
+      "css": "loading",
+      "code": 59392,
+      "src": "fontelico"
+    },
+    {
+      "uid": "f0c301ac841dafc38d8eb1b933fc73e5",
+      "css": "spin2",
+      "code": 59393,
+      "src": "fontelico"
+    },
+    {
+      "uid": "c5fd349cbd3d23e4ade333789c29c729",
+      "css": "eye",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9a76bc135eac17d2c8b8ad4a5774fc87",
+      "css": "download",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0f6a2573a7b6df911ed199bb63717e27",
+      "css": "github",
+      "code": 59403,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "44199a54057e6e264fde61a49b034171",
+      "css": "upload",
+      "code": 59402,
+      "src": "entypo"
+    },
+    {
+      "uid": "5d595124cecf472869d1cdc020da0ccc",
+      "css": "cloud",
+      "code": 59407,
+      "src": "entypo"
+    },
+    {
+      "uid": "005a38f6af74b31aeb817fedb09d2175",
+      "css": "keyboard",
+      "code": 59406,
+      "src": "entypo"
+    },
+    {
+      "uid": "89eb512cb82a1c3fe83cb16134f9876c",
+      "css": "time-machine",
+      "code": 59404,
+      "src": "entypo"
+    },
+    {
+      "uid": "97c6901d8db077614e77b089d4eedac8",
+      "css": "mouse",
+      "code": 59401,
+      "src": "entypo"
+    },
+    {
+      "uid": "9x8p16w516pn1b19chr85japkedporm7",
+      "css": "gallery",
+      "code": 59398,
+      "src": "typicons"
+    },
+    {
+      "uid": "0a9d5a8bfa0ccfd44a38328b8ca276c2",
+      "css": "mute",
+      "code": 59395,
+      "src": "typicons"
+    },
+    {
+      "uid": "pgdm1vsngqxmheo5xkjpbm5o8k81pawd",
+      "css": "flash",
+      "code": 59399,
+      "src": "typicons"
+    },
+    {
+      "uid": "3v2lgx3os8ub377alyqm8mn2o7r4zywg",
+      "css": "grids",
+      "code": 59400,
+      "src": "modernpics"
+    },
+    {
+      "uid": "rrb2e7qiu68cw7itzq0wzm2hugw1u4lu",
+      "css": "notification",
+      "code": 59405,
+      "src": "modernpics"
+    },
+    {
+      "uid": "2e3c51fc718aeb8b01604c8d039bcaeb",
+      "css": "block",
+      "code": 59396,
+      "src": "elusive"
+    }
+  ]
+}

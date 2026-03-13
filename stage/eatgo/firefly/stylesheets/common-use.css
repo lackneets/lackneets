@@ -1,0 +1,197 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #181818 url(../images/bg.jpg) no-repeat top center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+a:hover {
+  color: #99cc00;
+}
+
+header {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h1 {
+  float: right;
+  background: url(../images/logo.png) no-repeat;
+  width: 199px;
+  height: 46px;
+  margin-top: 20px;
+}
+
+h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-indent: -5000px;
+}
+
+#header-text {
+  float: left;
+  background: url(../images/title.png) no-repeat center;
+  width: 960px;
+  height: 229px;
+  text-indent: -5000px;
+  margin-top: 50px;
+}
+
+header p {
+  float: left;
+  width: 910px;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 30px 0 0 30px;
+  text-shadow: #333333 0px 0px 5px;
+}
+
+footer {
+  width: 960px;
+  text-align: right;
+  color: #444;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+footer #share-btn {
+  float: left;
+}
+footer #share-btn .btn-fb, footer #share-btn .btn-weibo {
+  float: left;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+footer #share-btn .btn-fb {
+  background: url(../images/btn_fb.png);
+  margin-right: 10px;
+}
+footer #share-btn .btn-fb:hover {
+  background: url(../images/btn_fb-hover.png);
+}
+footer #share-btn .btn-weibo {
+  background: url(../images/btn_weibo.png);
+}
+footer #share-btn .btn-weibo:hover {
+  background: url(../images/btn_weibo-hover.png);
+}
+
+/*-------------------------------------*/
+section {
+  width: 960px;
+  height: 430px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+/*article#taiwan-map {
+  float: left;
+  width: 360px;
+  height: 430px;
+  margin-top: 20px;
+}*/
+
+
+article#main {
+  float: right;
+  background: url(../images/);
+  width: 560px;
+  margin: 0 20px 0 0;
+}
+
+.map-select {
+  background: #fff;
+  color: #99cc00;
+  width: 140px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  padding: 5px;
+  border: 0;
+  margin: 0 0 10px 5px;
+  font-family: Arial,Helvetica,"微軟正黑體";
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#content {
+  background: #444444 url(../images/bg_box.png) no-repeat;
+  width: 570px;
+  height: 360px;
+}
+
+span {
+  float: right;
+  font-size: 13px;
+  color: #999;
+  text-align: right;
+  width: 570px;
+  margin-top: 10px;
+}
+
+ul {
+  float: left;
+  height: 250px;
+  margin: 70px 0 0 0;
+}
+
+.town {
+  width: 80px;
+  margin-left: 35px;
+}
+
+.data {
+  width: 370px;
+  margin-left: 50px;
+  color: #999;
+}
+.data li.eatgovillas a {
+  background: url(../images/bg_eatgivillas.png) no-repeat left;
+  color: #99cc00;
+  padding-left: 18px;
+}
+.data li.eatgovillas a:hover {
+  color: #fff;
+}
+
+li {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+li.current {
+  background: #6b6b6b url(../images/bg_arrow.png) no-repeat 65px;
+  -webkit-box-shadow: #333333 0px 0px 3px;
+  -moz-box-shadow: #333333 0px 0px 3px;
+  box-shadow: #333333 0px 0px 3px;
+}
+li.current:hover a {
+  color: #fff;
+}

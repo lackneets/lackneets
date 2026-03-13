@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--[if IE 11]><html class="ie11"><![endif]-->
+<!--[if IE 10]><html class="ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if IE 8]><html class="ie8"><![endif]-->
+<!--[if !IE]>--><html><!--<![endif]-->
+<head>
+  <title>Lackneets Chang | 小耀博士</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <meta name="og:title" content="Lackneets Chang | Front-End Developer">
+  <meta name="og:image" content="https://lackneets.tw/images/ogcard.png?v=1">
+
+  <meta name="author" content="Lackneets Chang">
+  <meta name="description" content="I am a creative programmer, turn ideas into reality. I have more than 5 years experience in modern web development, over 10 years of experience in programming. I am meant to solve problems on internet!">
+  <meta name="keywords" content="Lackneets Chang, 小耀博士, 前端工程師, 全端工程師, Frontend, Front-end, 網站製作, 噗浪外掛, 噗浪卡卡, PlurkCustoms">
+
+  <base target="_blank"></base>
+
+  <link rel="stylesheet" type="text/css" href="styles/styles.less">
+  <link rel="stylesheet" type="text/css" href="styles/styles-sky.less">
+  <link rel="stylesheet" type="text/css" href="styles/raindrops.less">
+
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!--[if !IE]><!-->
+  <!--<script src="//lackneets.tw:36200/livereload.js"></script> -->
+  <!--<![endif]-->
+
+  <script>
+    if(location.protocol != 'https:'){
+      location = 'https://' + location.hostname + location.pathname
+    }
+  </script>
+
+  <script src="vendor/jquery-1.11.3.min.js"></script>
+  <script src="vendor/jquery.waitforimages.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+  <script src="vendor/fpsmeter.min.js"></script>
+  <script src="vendor/rainyday-transparent.js"></script>
+  <script src="js/lighting.js"></script>
+  <script src="js/main.js?nocache"></script>
+
+</head>
+<body class="theme-night">
+
+  <div class="loading-mask">
+    <div class="spinner"></div>
+  </div>
+
+  <div id="fpsmeter"></div>
+
+  <nav></nav>
+
+  <div class="main-header full-view">
+    <div class="background"></div>
+    <div class="background-copyright"></div>
+    <div class="background-stage">
+      <canvas id="lighting"></canvas>
+      <div class="plane"></div>
+      <div class="cloud-base">
+        <script>for(var i=0; i<6; i++){ document.write('<div class="cloud"></div>'); }</script>
+      </div>
+    </div>
+    <div class="background-glass">
+      <div class="raindrops">
+        <script>for(var i=0; i<30; i++){ document.write('<div class="raindrop"></div>'); }</script>
+      </div>
+    </div>
+
+    <div class="sign noselect">
+      <div class="sm-wrap">
+        <h1>Lackneets Chang</h1>
+        <img src="images/lackneets-sign.svg" alt="Lackneets Chang">
+        <h3>Software Designer,<br> Lead Full Stack Engineer</h3>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <a class="link" target="_blank" href="https://www.facebook.com/lackneets">
+        <i class="icon-facebook"></i>
+        <span>Facebook</span>
+      </a>
+      <a class="link" target="_blank" href="https://www.flickr.com/photos/lackneets">
+        <i class="icon-flickr"></i>
+        <span>Flickr</span>
+      </a>
+      <a class="link" target="_blank" href="https://www.plurk.com/lackneets">
+        <i class="icon-plurk"></i>
+        <span>Plurk</span>
+      </a>
+      <a class="link" target="_blank" href="https://www.pixiv.net/member.php?id=3520841">
+        <i class="icon-pixiv"></i>
+        <span>Pixiv</span>
+      </a>
+      <a class="link" target="_blank" href="https://www.github.com/lackneets">
+        <i class="icon-github"></i>
+        <span>Github</span>
+      </a>
+      <a class="link" target="_blank" href="/portfolio">
+        <i class="icon-star"></i>
+        <span>Portfolio</span>
+      </a>
+      <!--
+      <a class="link" target="_blank" href="https://tw.linkedin.com/in/lackneets">
+        <i class="icon-linkedin"></i>
+        <span>Linked-in</span>
+      </a>
+      <a class="link my-email" target="_blank">
+        <i class="icon-mail"></i>
+        <span></span>
+      </a>
+      -->
+    </div>
+  </div>
+
+  <div class="main-container">
+
+    <section class="_full-view container">
+      <p>I am a creative programmer, software architecture designer, communicate with ideas, acts with implementation into reality. I have more than 5 years experience in modern web development, over 10 years of experience in programming. I love to solve problems on internet! As you see above, that animated viaual programming is my speciality.</p>
+
+    </section>
+
+    <section class="container">
+      <h3>Works</h3>
+
+      <table class="table table-works">
+        <tr>
+          <!-- <th></th>
+          <th>Version</th>
+          <th>Platform</th>
+          <th>Year</th> -->
+        </tr>
+        <tr>
+          <td><a href="https://pcustoms.lackneets.tw/">PlurkCustoms</a></td>
+          <td><span id="version-pcustoms">-</span></td>
+          <td><i class="icon-chrome" title="Chrome Browser"></i></td>
+          <td class="hidden-xs">2011-2016</td>
+        </tr>
+        <tr>
+          <td><a href="https://chrome.google.com/webstore/detail/ahcfljhlbjpnbcgpdolhdbnbogddlmnl">Sheepy Web Cloner</a></td>
+          <td>1.0.0.2</td>
+          <td><i class="icon-chrome" title="Chrome Browser"></i></td>
+          <td class="hidden-xs">2011-2015</td>
+        </tr>
+        <tr>
+          <td><a href="https://chrome.google.com/webstore/detail/abkoliilbacgpapmbiicanfebjkeonif">BetterFont</a></td>
+          <td>0.1.0.0</td>
+          <td><i class="icon-chrome" title="Chrome Browser"></i></td>
+          <td class="hidden-xs">2016</td>
+        </tr>
+        <tr>
+          <td><a href="https://locate.lackneets.tw/">Locate - Denso Mapcode</a></td>
+          <td>-</td>
+          <td><i class="icon-mobile" title="Mobile Browsers"></i></td>
+          <td class="hidden-xs">2015</td>
+        </tr>
+        <!-- <tr>
+          <td><a href="https://campaign-finance.g0v.lackneets.tw/">Campaign Finance Database</a></td>
+          <td>-</td>
+          <td><i class="icon-website" title="Website"></i></td>
+          <td class="hidden-xs">2014</td>
+        </tr>
+        <tr> -->
+          <td><a href="https://github.com/lackneets/osuRingtoneRipper">Osu RingtoneRipper</a></td>
+          <td>
+            <small><a href="https://github.com/lackneets/osuRingtoneRipper/raw/master/bin/Debug/osuRingtoneRipper.exe">x64</a></small>
+            <small><a href="https://github.com/lackneets/osuRingtoneRipper">source</a></small>
+          </td>
+          <td><i class="icon-win" title="Windows"></i></td>
+          <td class="hidden-xs">2011</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lackneets/SRT-Retimer">SRT Retimer</a></td>
+          <td>
+            <small><a href="https://github.com/lackneets/SRT-Retimer/raw/master/bin/Debug/SRT%20Retimer.exe">x64</a></small>
+            <small><a href="https://github.com/lackneets/SRT-Retimer">source</a></small>
+          </td>
+          <td><i class="icon-win" title="Windows"></i></td>
+          <td class="hidden-xs">2009</td>
+        </tr>
+      </table>
+
+      <p style="padding:0 8px">
+        <small><a href="/portfolio">More...</a></small>
+      </p>
+
+    </section>
+
+
+    <section class="container">
+      <h3>Useful Resources</h3>
+
+      <table class="table table-works">
+        <tr>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lackneets/ready.js">ready.js</a></td>
+          <td style="text-align: left">$.ready without jQuery</td>
+        </tr>
+        <tr>
+          <td><a href="https://github.com/lackneets/iframe-responsive.js">iframe-responsive.js</a></td>
+          <td style="text-align: left">Make cross-domain iframe fit height automatically</td>
+        </tr>
+        <tr>
+          <td><a href="https://works.lackneets.tw/demo/slots-machine-js/">SlotsMachine.js</a></td>
+          <td style="text-align: left">A infinite scrolling module of CSS3 powered slots-machine with motion blur</td>
+        </tr>
+        <tr>
+          <td><a href="https://works.lackneets.tw/boxcss">BoxCss</a></td>
+          <td style="text-align: left">(Deprectated draft) Very-lazy CSS Framework project in development</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="container hide">
+      <h3>Awesome Online Tools</h3>
+
+      <table class="table table-works">
+        <tr>
+        </tr>
+        <!-- <tr>
+          <td><a href="https://optimizilla.com/">Optimizilla</a></td>
+          <td>Image Optimization</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.colorfavs.com/">Colorfavs</a></td>
+          <td>Style & Colors</td>
+        </tr> -->
+        <!-- <tr>
+          <td><a href="https://gradient.quasi.ink/">Unique gradient generator</a></td>
+          <td>Style & Colors</td>
+        </tr> -->
+        <tr>
+          <td><a href="https://reep.io/">Reep.io</a></td>
+          <td>File Transfer</td>
+        </tr>
+        <tr>
+          <td><a href="https://codeshare.io/">Codeshare.io</a></td>
+          <td>Text Share</td>
+        </tr>
+        <tr>
+          <td><a href="https://opentokrtc.com/">OpenTokRTC</a></td>
+          <td>Video Meeting</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.windyty.com/">Windyty</a></td>
+          <td>Windmap, forecast</td>
+        </tr>
+        <!-- <tr>
+          <td><a href="https://screensiz.es/monitor">Screen sizes</a></td>
+          <td>Reference</td>
+        </tr>
+        <tr>
+          <td><a href="https://html5please.com/">HTML5 Please</a></td>
+          <td>Reference</td>
+        </tr>
+        <tr>
+          <td><a href="https://caniuse.com/">Can I use</a></td>
+          <td>Reference</td>
+        </tr>
+        <tr>
+          <td><a href="https://tobiasahlin.com/spinkit/">Spinkit</a></td>
+          <td>Web Component</td>
+        </tr>  -->
+      </table>
+    </section>
+
+    <section class="container">
+      <h3>Experience</h3>
+      <div class="experience-list">
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 time">2016~</div>
+          <div class="col-sm-9 col-xs-8 job">
+            <div class="company">
+              <a href="https://www.taroboadvisors.com/" target="_blank">Tarobo Advisors</a>
+              <small>Now</small>
+            </div>
+            <div class="title">Lead Full Stack Engineer</div>
+            <div class="detail">
+              <ul>
+                <li>Mutual fund information website development</li>
+                <li>Software design</li>
+                <li>Database structure design</li>
+                <li>Complex Ui&Ux design</li>
+                <li>Campaign Website support</li>
+                <li>Game develops for every yearend party</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 time">2016</div>
+          <div class="col-sm-9 col-xs-8 job">
+            <div class="company">Digim Ltd. <small>Long-term Partnership</small></div>
+            <div class="title">Senior Front-End R&D (Full Stack)</div>
+            <div class="detail">
+              <ul>
+                <li>Famous scooter official website develop / maintenance</li>
+                <li>Web layout / UI design</li>
+                <li>CMS Development</li>
+                <li>Enterprise MIS.</li>
+                <li>Campaign apps</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 time">2013~2015</div>
+          <div class="col-sm-9 col-xs-8 job">
+            <div class="company">
+              <a href="//www.gvm.com.tw/webonly_content_3438.html" target="_blank">
+                Eatgo Inc.
+              </a>
+              <small>Technical team from Pixnet</small>
+            </div>
+            <div class="company"></div>
+            <div class="title">Front-End Developer</div>
+            <div class="detail">
+              <ul>
+                <li>Villa booking system development</li>
+                <li>LBS applications development</li>
+                <li>Work in JavaScript, PHP, Ruby on Rails, Node.js</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 time">2011~</div>
+          <div class="col-sm-9 col-xs-8 job">
+            <div class="company">
+              <a href="//www.pure-way.com.tw/" target="_blank">
+                Pureway Ltd.
+              </a>
+              <small>Partner</small>
+            </div>
+            <div class="title">Web Developer</div>
+            <div class="detail">
+              <ul>
+                <li>Wordpress development for small business, college and government campaigns</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 time">2009~2011</div>
+          <div class="col-sm-9 col-xs-8 job">
+            <div class="company">
+              <a href="//www.microsoft.com/taiwan/casestudies/case/case_100714_yuntech.aspx" target="_blank">
+                i-Lab Digital Media Research Center, YunTech
+              </a>
+            </div>
+            <div class="title">Web Design Assistant</div>
+            <div class="detail">
+              <ul>
+                <li>Websites of industry-academy cooperation plan</li>
+                <li>Flash application, HTML5 application</li>
+                <li>Work in HTML, CSS, JavaScript, PHP, ActionScript 3.0</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 time">2009~2011</div>
+          <div class="col-sm-9 col-xs-8 job">
+            <div class="company">
+              <a href="//www.epochtimes.com/b5/6/10/10/n1482548.htm" target="_blank">
+                Collage of Information and Management, YunTech
+              </a>
+            </div>
+            <div class="title">Teaching Assistant of Programming</div>
+            <div class="detail">
+              <ul>
+                <li>Teach languages of Scheme, C, Java and Rudy on <a href="//plweb.org/" target="_blank">Plwab</a></li>
+                <li>Explain programming to students one by one</li>
+                <li>Set questions for midterm exam</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3 col-xs-4 time">2004~2009</div>
+          <div class="col-sm-9 col-xs-8 job">
+            <div class="company">
+
+            </div>
+            <div class="title"><small>Early years self-learning</small></div>
+            <div class="detail">
+              <ul>
+                <li><a href="images/book-actionscript.jpg" target="_blank">ActionScript 2.0</a></li>
+                <li><a href="//easun.org/perl/perl-toc/" target="_blank">Perl</a></li>
+                <li><a href="" target="_blank">C#.NET</a>, VB.NET</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-sm-6 col-lg-4">
+          <h3>Specialty</h3>
+          <ul>
+            <li>Web-Based Application</li>
+            <li>Web Frontend Programming</li>
+            <li>Web Backend Programming</li>
+            <li>Management of Information System</li>
+            <li>UI Design</li>
+            <li>CMS & EC Integration</li>
+            <li>2D Game Programming</li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <h3>Interest</h3>
+          <ul>
+            <li>Natural Language Programming</li>
+            <li>Data Mining</li>
+            <li>Photography</li>
+            <li>Piano</li>
+            <!-- <li>Illustrate (Anime)</li> -->
+          </ul>
+        </div>
+        <div class="col-sm-12 col-lg-4">
+          <h3>Education</h3>
+          <ul>
+            <li>Digital Content, Chenchi University</li>
+            <li>Information of Management, YunTech University</li>
+            <li>Digital Media Design, YunTech University </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+
+    </section>
+  </div>
+
+  <footer>
+    © 2020 Lackneets Chang. All rights reserved.
+    <p><a href="mailto:lackneets@gmail.com"><i class="icon-mail"></i> lackneets@gmail.com</a></p>
+  </footer>
+
+  <script>
+    if(location.host == 'lackneets.tw'){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69811083-1', 'auto');
+      ga('send', 'pageview');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--[if IE 11]><html class="ie11"><![endif]-->
+<!--[if IE 10]><html class="ie10"><![endif]-->
+<!--[if IE 9]><html class="ie9"><![endif]-->
+<!--[if lte IE 8]><html class="ie8"><![endif]-->
+<!--[if !IE]>--><html><!--<![endif]-->
+<head>
+
+  <title>PlurkCustoms | 噗浪卡卡</title>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+  <meta name="og:title" content="PlurkCustoms">
+  <meta name="og:image" content="The most popular and powerful extension for Plurk.">
+
+  <!-- Stylesheets here -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <!--[if lt IE 9]>
+  <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="vendor/fontello/css/fontello.css">
+  <link rel="stylesheet" type="text/css" href="vendor/fontello/css/animation.css">
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+  <!-- Javascripts here -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="emoticons.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
+
+  <div class="loading-mask">
+    <!-- Place spinkit here http://tobiasahlin.com/spinkit/ -->
+  </div>
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="#">Project name</a> -->
+      </div>
+      <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="./">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="https://chrome.google.com/webstore/detail/npkllofhoohpldfjaepknfbjbmehjpmc">Download</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <!--
+          <li><a href="javascript:void(0)">中文</a></li>
+          <li class="active"><a href="./">English <span class="sr-only">(current)</span></a></li>
+          <li><a href="javascript:void(0)">日本語</a></li>
+          -->
+          <li>
+            <a href="https://github.com/lackneets/PlurkCustoms" style="padding: 11px;">
+              <i class="icon-github" style="font-size: 2em;line-height: 1em;"></i>
+            </a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="main-header">
+    <!-- Hero Header, height: 100vh is great -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-lg-6">
+          <section class="masthead">
+            <img src="images/logotype.svg">
+            <h1>PlurkCustoms</h1>
+            <h1>噗浪卡卡</h1>
+            <p class="lead">
+              The most popular and powerful extension for Plurk.
+            </p>
+            <a class="btn btn-lg" href="https://chrome.google.com/webstore/detail/npkllofhoohpldfjaepknfbjbmehjpmc">Download for Chrome</a>
+            <p class="version">Currently v<span id="version"></span></p>
+          </section>
+        </div>
+
+        <div class="col-md-7 col-lg-6">
+          <section class="demo-box">
+            <div class="selector-wrap">
+              <div class="selector">
+                <div class="box default">
+                  <div class="gallery-filter">
+                    <!-- <input type="text" class="form-control input-sm filter" placeholder="Find emoticon..."> -->
+                  </div>
+                  <div class="gallery">
+                  </div>
+                </div>
+                <div class="box"></div>
+                <div class="box"></div>
+              </div>
+              <div class="tabs">
+                <a class="tab-default active"></a>
+                <a class="tab-online fake"></a>
+                <a class="tab-gallery"></a>
+                <a class="tab-favorite fake"></a>
+                <a class="tab-collector fake"></a>
+                <a class="tab-backup fake"></a>
+                <a class="tab-settings fake"></a>
+                <a class="tab-tools fake"></a>
+              </div>
+            </div>
+            <div class="poster-box">
+              <span class="qual">Says</span>
+              <input type="text" class="form-control post-input" placeholder="Try me!">
+            </div>
+            <div class="candidate">
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container">
+    <section class="container feature" id="features">
+
+      <div class="features row">
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-flash"></i>
+          <h3>Unlimited Emoticons</h3>
+          <p>You can have over 60 emoticons</p>
+        </div>
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-keyboard"></i>
+          <h3>Autocomplete</h3>
+          <p>Pick emoticon while typing, super easy</p>
+        </div>
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-cloud"></i>
+          <h3>Backup to Cloud</h3>
+          <p>Don't be afraid of losing them</p>
+        </div>
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-download"></i>
+          <h3>Full Backup</h3>
+          <p>Pack all emoticon images download to your computer</p>
+        </div>
+
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-grids"></i>
+          <h3>Advenced Gallery</h3>
+          <p>Easy to find anything and management</p>
+        </div>
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-upload"></i>
+          <h3>Bulk Upload</h3>
+          <p>Easy to upload a series of emoticons once</p>
+        </div>
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-mute"></i>
+          <h3>Mute All</h3>
+          <p>The mysterious power let all posts muted</p>
+        </div>
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-eye"></i>
+          <h3>Collector</h3>
+          <p>Auto collect emoticons appear in timeline</p>
+        </div>
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-notification"></i>
+          <h3>Notification Sound</h3>
+          <p>Alert when you got new response. Sound can also be changed</p>
+        </div>
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-time-machine"></i>
+          <h3>Time Machine</h3>
+          <p>Travel to old posts at speed of 88 mph</p>
+        </div>
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-block"></i>
+          <h3>Hide Ads</h3>
+          <p>Say goodbye to annoying advertisements</p>
+        </div>
+
+        <div class="feature col-md-6">
+          <i class="demo-icon icon-github"></i>
+          <h3>Free</h3>
+          <p>It's open source and free! Help us improve it</p>
+        </div>
+
+      </div>
+
+      <section class="container download">
+        <a class="btn btn-lg" href="https://chrome.google.com/webstore/detail/npkllofhoohpldfjaepknfbjbmehjpmc">Download for Chrome</a>
+      </section>
+
+  </div>
+
+  <footer>
+    PlurkCustoms © 2010 - 2016 <a href="https://lackneets.tw">Lackneets</a>. All rights reserved.
+  </footer>
+
+  <script>
+    if(location.host == 'lackneets.tw'){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69811083-1', 'auto');
+      ga('send', 'pageview');
+    }
+  </script>
+
+</body>
+</html>

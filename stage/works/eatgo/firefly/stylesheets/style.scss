@@ -1,0 +1,46 @@
+body{
+	// background: #181818;
+	// #main{
+	// 	padding: 20px 60px;
+	// 	padding-top: 480px;
+	// 	background: #181818;
+	// 	background-image: url(../images/cover.png);
+	// 	background-repeat: no-repeat;
+	// 	background-position: center top;
+	// }
+	min-width: 960px;
+	.jvectormap-zoomout, .jvectormap-zoomin{ display: none; }
+	// .container{
+	// 	max-width: 1080px;
+	// }
+
+	header p{
+		font-size: 16px\9;
+	}
+
+	#taiwan-map-wrapper{
+		float: left;
+		width: 360px;
+		height: 430px;
+		#taiwan-map{
+			position: absolute;
+		}
+		#taiwan-map-label{
+			position: absolute; display:none;
+		}
+		#taiwan-map-hover{
+			position: absolute;
+			opacity: 0;
+			z-index: 99; display:none;
+		}
+	}
+
+	ul.town{
+		width: 110px;
+		//height: 260px;
+		li{width: 60px;}
+	}
+
+	#share-btn a{ cursor: pointer;}
+
+}

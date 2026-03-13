@@ -1,0 +1,105 @@
+//@import 'lesshat.less';
+
+@doubleCloud: false;
+@iterations: 10;
+
+.cloud-base{
+  position: absolute;
+  top: 10vh; 
+  right: 0;
+  left: 0;
+  // outline: 1px solid red;
+  .cloud:before,
+  .cloud:after{
+    content: '';
+    background: url(../images/sky/cloud.png) no-repeat;
+    background-size: contain;
+    width: 40vh;
+    height: 40vh;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .cloud:after{
+    opacity: 0.6;
+    background: url(../images/sky/darkCloud.png) no-repeat;
+    background-size: contain;
+    animation-direction: reverse !important;
+  }
+  & when not (@doubleCloud = true){
+    .cloud:after{
+      display: none;
+    }
+  }
+}
+
+.mixin-loop (@i) when (@i > 0) {
+  
+  @scale: `Math.random() * 0.5 + 0.8`;
+  @brightness: `Math.random() * 0.4 + 0.5`;
+  @opacity: `Math.random() * 0.4 + 0.6`;
+
+  @thiness: `Math.random() * 0.2 + 0.6`;
+
+  @animate: ~"cloud-move-@{i}";
+  @animateRotate: ~"cloud-rotate-@{i}";
+  
+  @rand: `Math.random()`;
+
+  @randA: `Math.random()`;
+  @randB: `Math.random()`;
+  @direction: `Math.random()>0.5 ? 1 : -1`;
+
+  .cloud:nth-of-type(@{i}) {
+    // left: @i * 100% / @iterations;
+    top: 10%*@rand;
+    opacity: @opacity;
+    transform-origin: 50% 50%;
+    animation: @animate 250s+200s*@rand+20s*@i -500s*@rand infinite linear;
+    &:after,
+    &:before,
+    {
+      transform-origin: 50% 50%;
+      animation: @animateRotate 450s+100s*@rand -500s*@rand infinite linear;
+      // .filter(brightness(@brightness));
+    }
+    &:after{
+      margin-left: round(`-5 + Math.random()*10`)*1%;
+    }
+  }
+  @keyframes @animateRotate{
+    0%{
+      transform: rotate(0deg*@direction);
+    }
+    50%{
+      transform: rotate(-180deg*@direction);
+    }
+    100%{
+      transform: rotate(-360deg*@direction);
+    }
+  }
+  @keyframes @animate{
+    0%{
+      // transform: translateX(130vw) translateY(@randA*10%) scale(@scale) rotateX(@randA*30deg) rotateY(@randA*@rand*20deg);
+      transform: translateX(150vw) translateY(@randA*10%) scale(@scale, @scale*@thiness);
+    }
+    100%{
+      // transform: translateX(-30vw) translateY(@randA*-10%) scale(@scale) rotateX(@randA*-30deg) rotateY(@randA*@rand*-20deg);
+      transform: translateX(-50vw) translateY(@randA*-10%) scale(@scale, @scale*@thiness);
+    }
+  }
+  .mixin-loop(@i - 1);
+}
+.mixin-loop(@iterations);
+
+@media (max-width:700px){
+  .cloud:nth-of-type(5),
+  .cloud:nth-of-type(6),
+  .cloud:nth-of-type(7),
+  .cloud:nth-of-type(8),
+  .cloud:nth-of-type(9),
+  .cloud:nth-of-type(10){
+    display: none;
+  }
+}

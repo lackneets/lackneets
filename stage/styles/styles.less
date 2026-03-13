@@ -1,0 +1,634 @@
+@import 'lesshat';
+
+@import url('//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css');
+@import url('//fonts.googleapis.com/css?family=Lora:400italic');
+@import url('//fonts.googleapis.com/css?family=Droid+Sans+Mono|Alegreya+Sans:400,300,500');
+@import url('../vendor/fontello/css/lc-icons.css');
+@import url('animate.css');
+
+// @import 'styles-sky.less';
+// @import 'raindrops.less';
+
+
+@t-fast: .5s;
+@t-normal: 1s;
+@t-slow: 1.5s;
+
+
+body, html{
+  padding: 0;
+  margin: 0;
+  font: 16px/25px "Whitney HTF", Whitney, "Alegreya Sans", Lato, sans-serif;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.font-lora-italic{
+  font-family: Lora, serif;
+  font-style: italic;
+}
+
+.full-view{
+  height: 100vh;
+}
+
+.fill-container{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.fixed-view{
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.radius-bg{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-radial-gradient(center, ellipse cover,  rgba(100,100,100,.85) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  rgba(100,100,100,.85) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  rgba(100,100,100,.85) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.radius-bg(@center, @border){
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+  background: -moz-radial-gradient(center, ellipse cover,  @center 0%, @border 100%); /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover,  @center 0%,@border 100%); /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center,  @center 0%,@border 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.glowlight{
+  .drop-shadow(0 0px 2px rgba(255,255,255,.8));
+}
+
+
+.horizontal-bg{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+50,000000+100&0+0,0.2+20,0.35+50,0.2+80,0+100 */
+  background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.35) 50%, rgba(0,0,0,0.2) 80%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 20%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.2) 80%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 20%,rgba(0,0,0,0.35) 50%,rgba(0,0,0,0.2) 80%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+}
+
+body{
+
+  a{
+    color: white;
+    text-decoration: none;
+    &:focus, &:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    &[href]{color: #ffd;}
+    &[href]:focus, &[href]:hover {
+      color: white;
+      text-shadow: 0 0 2px #FFF;
+      text-decoration: none;
+    }
+  }
+
+  #fpsmeter{
+    transform: scale(.6);
+    transform-origin: right top;
+    position:fixed; top: .25em; right:.5em; left:auto;
+    z-index:9999;
+    opacity:.5;
+    width: 100px;
+    .noselect;
+  }
+
+  .main-header{
+    position: relative;
+    .background{
+      .fill-container;
+      .filter(blur(1.5px));
+      bottom: -40px;
+      background: url(//c2.staticflickr.com/6/5747/20783861346_e49c9e63af_b.jpg) center;
+      background-size: cover;
+      &:before{
+        .radius-bg(rgba(0,0,0,0), rgba(0,0,0,.5));
+        .fill-container;
+        opacity: .5;
+        content: " ";
+        display: block;
+      }
+    }
+
+    .background-copyright:after{
+      content: "© 2016 Lackneets";
+      position: absolute;
+      left: 10px; bottom: 10px;
+      color: rgba(255,255,255,.6);
+    }
+
+    .background-stage{
+      .fill-container;
+      canvas#lighting{
+        opacity: 0.2;
+      }
+      .plane{
+        min-width: 40px;
+        min-height: 40px;
+
+        width: 3vw;
+        height: 3vw;
+
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        opacity: 0;
+        -webkit-backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+        &:before{
+          .fill-container;
+          .filter(brightness(0.8) sepia(0.2));
+          content: ' ';
+          display: block;
+          // transform: rotate(-10deg);
+          background: url(../images/plane-br.png) no-repeat top right;
+          background-size: contain;
+        }
+        &:after{
+          .glowlight;
+          content: ' ';
+          width: 2px; height: 2px;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          border-radius: 50%;
+          // transform: rotate(-10deg);
+          animation: blink-light @t-slow infinite;
+        }
+      }
+    }
+
+    .background-glass{
+      img:extend(.noselect){}
+      canvas:extend(.noselect){
+        width: 100vw;
+        height: 100vh;
+        // opacity: .8;
+        object-fit: cover;
+      }
+    }
+
+    iframe{
+      .fill-container;
+      .filter(blur(1.5px) sepia(0.2));
+      border:none;
+      width: 130%;
+      height: 180vh;
+      margin-top: -40vh;
+    }
+
+    .sign:extend(.font-lora-italic){
+      height: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 35%;
+
+      img:extend(.noselect){
+        .glowlight;
+        width: 250px;
+        height: auto;
+        display: block;
+        margin:auto;
+      }
+
+      h1{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        text-align: center;
+        margin: 0;
+        color: transparent;
+      }
+
+      h3{
+       color: #333;
+       line-height: 1.5em;
+       font-size: 16px;
+       text-align: center;
+       text-shadow: 0 1px 2px rgba(255, 255, 255, .6);
+     }
+   }
+
+   .social-links:extend(.horizontal-bg){
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      bottom: 20%;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0px 1px 2px rgba(100, 100, 100, 0.2) inset;
+
+      a{
+        position: relative;
+        color: white;
+        font-size: 1.6em;
+        opacity: .6;
+        text-decoration: none;
+        margin: 0.3em;
+        &:hover{
+          opacity: 1;
+          span{
+            animation: fadeInUp @t-normal;
+            display: block;
+          }
+        }
+        span{
+          .font-lora-italic;
+          display: none;
+          color: #FFF;
+          font-size: .6em;
+          position: absolute;
+          left: 50%;
+          top: -30px;
+          margin-left: -50px;
+          text-align: center;
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .main-container{
+    box-shadow: -2px 0 8px 1px #333;
+    background: linear-gradient(20deg, #60716c, #9aa193 75%, #9aa193) fixed;
+    color: rgba(255,255,255,.7);
+    text-shadow: 0 1px 3px rgba(0,0,0,.15);
+  }
+
+  table.table-works{
+    th, td{
+      border: none;
+      vertical-align: middle;
+      &:nth-child(n+2){
+        text-align: center;
+      }
+    }
+    th{
+      font-weight: 500;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    tr:nth-child(odd) td{
+      background-color: rgba(200,200,200,.1);
+    }
+    small:nth-child(n+2){
+      margin-left: 5px;
+      padding-left: 5px;
+      border-left: 1px solid rgba(200,200,200,.3);
+    }
+  }
+
+  .experience-list{
+    font: 13px/25px Arial, sans-serif;
+    a{
+      border-bottom: 1px dotted rgba(255,255,180,.5);
+    }
+    .row{
+      .time{
+        padding: 10px 15px;
+        &:after{
+          @size: 15px;
+          content: ' ';
+          display: block;
+          width: @size;
+          height: @size;
+          border: 2px solid white;
+          border-radius: 50%;
+          position: absolute;
+          right: @size + 15px + 2px;
+          top: 15px;
+        }
+      }
+      .job{
+        padding: 10px 15px;
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          left: -40px;
+          top: 0;
+          bottom: 0;
+          border-left: 1px solid rgba(255,255,255,.3);
+        }
+      }
+      &:first-child .time:after{
+        .glowlight;
+        background-color: white;
+      }
+      &:first-child .time:after{
+        animation: glow-pulse @t-slow infinite;
+      }
+      &:nth-child(even){
+        background-color: rgba(200,200,200,.1);
+      }
+      small{
+        opacity: .6;
+      }
+    }
+  }
+
+  section{
+    margin: 40px auto;
+  }
+
+  footer{
+    padding: 40px;
+    text-align: center;
+    color: white;
+    a, a:hover, a:visited, a:focus{
+      color: rgba(255,255,255, .4);
+    }
+  }
+}
+
+section.contact{
+  background: orange;
+}
+
+/* Structure */
+body{
+
+  .loading-mask{
+    .fixed-view;
+    background-color: #FFF;
+    z-index: 10000;
+    & > div{
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      margin-left: -20px;
+    }
+  }
+
+  .main-header{
+    .fixed-view;
+    background-color: #333;
+    z-index: 1;
+  }
+
+  .raindrops{
+    // display: none;
+  }
+
+  .main-container{
+    position: relative;
+    overflow: auto;
+    background-color: rgba(255,255,255,.8);
+    z-index: 2;
+    margin-top: 100vh;
+  }
+
+  footer{
+    position: relative;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 3;
+  }
+
+  &.init{
+    .loading-mask{
+      opacity: 0;
+      background-color: #333;
+      pointer-events: none;
+      .spinner{
+        display: none;
+      }
+    }
+  }
+}
+
+/* Animations */
+body{
+
+  .loading-mask{
+    transition: opacity @t-slow @t-fast, background @t-fast;
+  }
+
+  & {
+    .background{
+      .transition(filter @t-fast)
+    }
+    .sign{
+      transform: translateY(0vh) scale(1) !important;
+      opacity: 1;
+      transition: transform @t-normal, opacity @t-fast;
+    }
+  }
+
+  &.skip-hero{
+    .main-header .background{
+      .filter(blur(4px));
+    }
+    .main-header .background-stage,
+    .main-header .background-stage{
+      .filter(blur(1.8px));
+    }
+    .background-glass .raindrop,
+    .background-glass canvas{
+      .filter(blur(0.8px));
+    }
+    .background-copyright{
+      opacity: 0;
+    }
+    .sign{
+      transform: translateY(-5vh) scale(.8) !important;
+      opacity: 0;
+    }
+    .social-links{
+      opacity: 0;
+    }
+  }
+
+  &.init{
+    .sign{
+      animation: fadeIn 2s 1s backwards;
+      h3{
+        animation: fadeInDown 1s 2s backwards;
+      }
+    }
+    .plane{
+      // animation: airplane 40s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      animation: airplane 40s infinite cubic-bezier(0.2, 0.36, 0, 0.65);
+    }
+  }
+
+  &.plane-br .background-stage .plane:before{ background-image: url(../images/plane-br.png) !important; }
+  &.plane-ci .background-stage .plane:before{ background-image: url(../images/plane-ci.png) !important; }
+  &.plane-mm .background-stage .plane:before{ background-image: url(../images/plane-mm.png) !important; transform: rotate(8deg) translate(-8%, -2%); }
+  &.plane-mm2 .background-stage .plane:before{ background-image: url(../images/plane-mm-1.png) !important; }
+}
+
+/* For slow browsers */
+html.slow-performance{
+  #lighting,
+  .background-stage{
+    // display: none !important;
+  }
+
+  .main-header .background-stage,
+  .main-header .background-stage{
+    .filter(none) !important;
+  }
+
+  .background,
+  .background-glass canvas,
+  .background-glass .raindrop{
+    .transition(none) !important;
+  }
+
+  .background-glass canvas,
+  .background-glass .raindrop{
+    .filter(none) !important;
+  }
+}
+
+/* IE Fallback */
+html.ie8, html.ie9{
+  .loading-mask .spinner{ display:none; }
+  .background-stage{ display: none !important }
+  .social-links{ background-color: rgba(0,0,0,.35); }
+}
+
+html.ie8{
+  body * { display: none !important }
+  body:before{
+    content: "OOPS!!";
+    font-size: 80px;
+    line-height: 120px;
+    display: block;
+    padding: 10px 20px;
+  }
+  body:after{
+    content: "Update your browser!";
+    font-size: 60px;
+    line-height: 120px;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 360px) {
+  body{
+    .social-links a{
+      font-size: 1.2em !important;
+
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 450px) {
+  body{
+    .background,
+    .background-glass{
+      .transition(none) !important;
+    }
+    .raindrops{
+      display: none !important;
+    }
+    .background-glass{
+      .filter(none) !important;
+    }
+    .cloud{ display: none !important; }
+  }
+}
+
+
+@keyframes airplane {
+  0%, 10% {
+    transform: perspective(500px) rotate(10deg) translate3d(30vw, 40vh, 0) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: perspective(500px) rotate(0deg) translate3d(-100vw, 15vh, -200px) scale(.1, .2);
+    opacity: .1;
+  }
+}
+
+@keyframes blink-light {
+  0%, 40% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: rgba(255,255,255,.8);
+  }
+}
+
+@keyframes glow-pulse {
+  0% {
+    .drop-shadow(0 0px 2px rgba(255, 255, 255, 0));
+  }
+  5% {
+    .drop-shadow(0 0px 2px rgba(255, 255, 255, 0.8));
+  }
+  95%, 100% {
+    .drop-shadow(0 0px 20px transparent);
+  }
+}
+
+
+/* Themes */
+
+body.theme-night{
+  .main-header .background{
+    background-image: url(//c1.staticflickr.com/1/748/20187533514_09ca5b0575_b.jpg);
+  }
+  .background-copyright:after{
+    content: "Sunset of Taipei © 2016 Lackneets";
+    color: rgba(255,255,255,.4);
+  }
+  .main-header .sign h3{
+    color: rgba(255,255,255,.8);
+    text-shadow: 0 1px 3px rgba(0,0,0,.8);
+  }
+  .main-container{
+    background-color: #495158;
+    background-image: linear-gradient(20deg, #192831, #495158 75%, #3a3736);
+  }
+}
+
+/** Spinner **/
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #333;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0%
+  {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}

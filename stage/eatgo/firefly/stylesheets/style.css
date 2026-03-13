@@ -1,0 +1,26 @@
+body {
+  min-width: 960px; }
+  body .jvectormap-zoomout, body .jvectormap-zoomin {
+    display: none; }
+  body header p {
+    font-size: 16px\9; }
+  body #taiwan-map-wrapper {
+    float: left;
+    width: 360px;
+    height: 430px; }
+    body #taiwan-map-wrapper #taiwan-map {
+      position: absolute; }
+    body #taiwan-map-wrapper #taiwan-map-label {
+      position: absolute;
+      display: none; }
+    body #taiwan-map-wrapper #taiwan-map-hover {
+      position: absolute;
+      opacity: 0;
+      z-index: 99;
+      display: none; }
+  body ul.town {
+    width: 110px; }
+    body ul.town li {
+      width: 60px; }
+  body #share-btn a {
+    cursor: pointer; }

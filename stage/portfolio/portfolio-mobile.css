@@ -1,0 +1,156 @@
+@media screen and (max-width: 940px) {
+  div#skills .devtools {
+    text-align: center;
+  }
+  div#skills .devtools .devtool {
+    width: 30px;
+    margin: 8px 0px;
+    overflow: hidden;
+    float: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  div#skills li.devtool {
+    width: 25px;
+  }
+  div#skills li.devtool i[class*="icon-"] {
+    font-size: 1.4em;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5) {
+  div#about-me .mobile-newline {
+    display: block;
+    height: 0px;
+    text-indent: -9999px;
+  }
+  a.toggle-language {
+    font-size: 1.4rem;
+    display: inline-block;
+    overflow: visible;
+    box-shadow: none !important;
+    background: none !important;
+  }
+  a.toggle-language:after {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 760px) {
+  img.profile-pic {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  div#about-me {
+    min-height: 300px;
+  }
+  div#about-me .profile-name {
+    font-size: 2rem;
+  }
+  div#skills {
+    padding: 0;
+  }
+  div.entry {
+    max-width: 100%;
+    overflow: hidden;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  div.entry:last-child {
+    padding-bottom: 0px;
+  }
+  div.timeline-scroller {
+    margin-left: -2px;
+    padding-top: 60px;
+    width: 0px;
+  }
+  div.timeline-scroller .side-bookmark {
+    color: rgba(255, 255, 255, 0.2);
+    opacity: 1;
+    transform: scale(1.2) rotate(90deg) translateY(-20px) translateX(9px);
+  }
+  div.timeline-scroller .side-bookmark:not(.view-current) {
+    opacity: 0;
+  }
+  div.timeline-scroller .side-bookmark:before {
+    display: none;
+  }
+  div.timeline-scroller .side-bookmark.view-top:not(.view-current) {
+    transform: scale(1.2) rotate(90deg) translateY(-20px) translateX(-100px);
+  }
+  div.timeline-scroller .side-bookmark.view-bottom {
+    transform: scale(1.2) rotate(90deg) translateY(-20px) translateX(100px);
+  }
+  div.timeline-body .entry .entry-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  #toggleSideMenu {
+    display: none;
+  }
+  #toggleSideMenu + label {
+    display: block;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    left: 10px;
+    padding: 3px 8px;
+    position: fixed;
+    top: 10px;
+    z-index: 1000;
+    font-size: 1.5em;
+    line-height: 1.3;
+    height: 1.3em;
+    background-color: rgba(100, 100, 100, 0.5);
+  }
+  #toggleSideMenu + label i {
+    color: #FFF;
+    margin: 0;
+  }
+  #toggleSideMenu + label .icon-cancel {
+    display: none;
+  }
+  #toggleSideMenu:checked + label .icon-cancel {
+    display: inline;
+  }
+  #toggleSideMenu:checked + label .icon-menu {
+    display: none;
+  }
+  #toggleSideMenu:checked ~ div.timeline-scroller {
+    width: 200px;
+    overflow: visible;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;1+0,0.6+20,0+96 */
+    background: -moz-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 96%, rgba(0, 0, 0, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #000000), color-stop(20%, rgba(0, 0, 0, 0.6)), color-stop(96%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 96%, rgba(0, 0, 0, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 96%, rgba(0, 0, 0, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #000000 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 96%, rgba(0, 0, 0, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #000000 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 96%, rgba(0, 0, 0, 0) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#00000000', GradientType=1);
+    /* IE6-9 */
+  }
+  #toggleSideMenu:checked ~ div.timeline-scroller .side-bookmark {
+    color: white;
+  }
+  #toggleSideMenu:checked ~ div.timeline-scroller .side-bookmark:before {
+    display: block;
+  }
+  #toggleSideMenu:checked ~ div.timeline-scroller .side-bookmark.view-in {
+    transform: scale(1);
+    opacity: 1;
+    top: 0 !important;
+  }
+  #toggleSideMenu:checked ~ div.timeline-scroller .side-bookmark.view-bottom {
+    transform: scale(1);
+    opacity: 1;
+    top: 0 !important;
+  }
+  .current .mobile-iphone {
+    right: -30px;
+  }
+}

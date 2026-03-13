@@ -1,0 +1,388 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 450px) {
+  /* is mobile phone */
+}
+/* Show nothing on IE8 or older */
+html.ie8 body * {
+  display: none !important;
+}
+html.ie8 body:before {
+  content: "OOPS!!";
+  font-size: 80px;
+  line-height: 120px;
+  display: block;
+  padding: 10px 20px;
+}
+html.ie8 body:after {
+  content: "Update your browser!";
+  font-size: 60px;
+  line-height: 120px;
+  padding: 10px 20px;
+}
+.bg-gradient {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d22e3f+0,d22e3f+100&0.7+1,1+33,1+100 */
+  background: -moz-radial-gradient(center, ellipse cover, rgba(210, 46, 63, 0.7) 0%, rgba(210, 46, 63, 0.7) 1%, #d22e3f 33%, #d22e3f 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(210, 46, 63, 0.7) 0%, rgba(210, 46, 63, 0.7) 1%, #d22e3f 33%, #d22e3f 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, rgba(210, 46, 63, 0.7) 0%, rgba(210, 46, 63, 0.7) 1%, #d22e3f 33%, #d22e3f 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3d22e3f', endColorstr='#d22e3f', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.bg-gradient-white {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+41 */
+  background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ffffff 0%, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
+}
+.full-view {
+  min-height: 100vh;
+}
+body nav.navbar {
+  margin: 0 !important;
+}
+body a[href] {
+  color: #D22E3F;
+}
+body .main-header {
+  background-color: #D22E3F;
+}
+body .main-header section {
+  margin: 15vh auto;
+  overflow: auto;
+}
+body .poster-box {
+  width: 480px;
+  display: flex;
+  margin: 10px 0;
+}
+body .poster-box > * {
+  align-items: center;
+}
+body .poster-box input {
+  width: 100%;
+}
+body .poster-box .qual {
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: white;
+  margin-right: 5px;
+  background-color: #e57c43;
+  border: none;
+  border-radius: 4px;
+  border-right: 1px solid #994215;
+  border-bottom: 1px solid #994215;
+}
+body .poster-box .qual.thinks {
+  background-color: #689cc1;
+  border-right: 1px solid #254a64;
+  border-bottom: 1px solid #254a64;
+}
+body .poster-box button {
+  background: transparent url(//s.plurk.com/01e87d27ea286c87fb9e5c8155fdc1b6.png) 0 -479px no-repeat;
+  width: 87px;
+  box-sizing: content-box;
+  border: none;
+  color: transparent;
+  font-size: 1px;
+  height: 38px;
+}
+body .candidate {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #FFF;
+  padding: 10px;
+}
+body .candidate .emoticon {
+  padding-top: 10px;
+  height: 70px;
+}
+body .candidate .emoticon .shortcut {
+  color: #D22E3F;
+  display: none;
+}
+body .candidate .emoticon:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  font-size: 9px;
+  color: #D22E3F;
+}
+body .candidate .emoticon:nth-of-type(0):before {
+  content: "Alt + 0";
+}
+body .candidate .emoticon:nth-of-type(1):before {
+  content: "Alt + 1";
+}
+body .candidate .emoticon:nth-of-type(2):before {
+  content: "Alt + 2";
+}
+body .candidate .emoticon:nth-of-type(3):before {
+  content: "Alt + 3";
+}
+body .candidate .emoticon:nth-of-type(4):before {
+  content: "Alt + 4";
+}
+body .candidate .emoticon:nth-of-type(5):before {
+  content: "Alt + 5";
+}
+body .candidate .emoticon:nth-of-type(6):before {
+  content: "Alt + 6";
+}
+body .candidate .emoticon:nth-of-type(7):before {
+  content: "Alt + 7";
+}
+body .candidate .emoticon:nth-of-type(8):before {
+  content: "Alt + 8";
+}
+body .candidate .emoticon:nth-of-type(9):before {
+  content: "Alt + 9";
+}
+body .candidate .emoticon:hover {
+  background: #D22E3F;
+}
+body .candidate .emoticon:hover:before {
+  background-color: #D22E3F;
+  color: #FFF;
+}
+body .emoticon {
+  transition: opacity 0.5s;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+body .emoticon img {
+  max-width: 100%;
+  height: auto;
+}
+body .emoticon.loading img {
+  display: none;
+}
+body .emoticon.loading:after {
+  content: "\E800";
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  animation: spin 2s infinite linear;
+}
+body .emoticon:hover {
+  opacity: 1;
+  position: relative;
+  z-index: 9999;
+  box-shadow: #D22E3F 0px 0px 1px 1px, inset #D22E3F 0 0 1px 1.5px;
+}
+body section.masthead {
+  position: relative;
+  text-align: center;
+  color: #FFF;
+}
+body section.masthead .btn {
+  background: none;
+  border-color: white;
+  color: #FFF;
+  margin: 25px;
+  box-shadow: 0 0 2px 0 #FFF, inset 0 0 2px 0 #FFF;
+}
+body section.masthead .btn:hover {
+  text-shadow: 0 0 2px #FFF;
+}
+body section.masthead h1,
+body section.masthead h2 {
+  position: absolute;
+  top: -9999%;
+}
+body section.masthead img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+}
+body section.masthead .version {
+  color: rgba(200, 200, 200, 0.5);
+}
+body section.demo-box {
+  width: 480px;
+  overflow: visible;
+}
+body section.demo-box .selector-wrap {
+  box-shadow: 1px 0 2px 2px #FFF;
+}
+body section.demo-box .selector {
+  overflow-y: scroll;
+  width: 480px;
+  height: 320px;
+  background-color: white;
+}
+body section.demo-box .gallery-filter {
+  padding: 5px;
+}
+body section.demo-box .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+body section.demo-box .gallery:hover .emoticon {
+  opacity: 0.4;
+}
+body section.demo-box .gallery .emoticon {
+  cursor: pointer;
+}
+body section.demo-box .gallery .emoticon:hover {
+  opacity: 1;
+  position: relative;
+  z-index: 9999;
+  box-shadow: #D22E3F 0px 0px 1px 1px, inset #D22E3F 0 0 1px 1.5px;
+}
+body section.demo-box .tabs {
+  background-color: #FAFAFA;
+  display: flex;
+  padding: 0 5px 5px 5px;
+  border-top: 1px solid #C1D0D7;
+}
+body section.demo-box .tabs a {
+  border: 1px solid #C1D0D7;
+  display: inline-block;
+  width: 45px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  margin: 0 1.5px;
+  margin-top: -1px;
+  cursor: pointer;
+}
+body section.demo-box .tabs a.active {
+  border-top-color: white;
+  background-color: white;
+}
+body section.demo-box .tabs a:hover {
+  background-color: white;
+}
+body section.demo-box .tabs .fake {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+body section.demo-box .tabs .tab-default {
+  background-image: url(images/plurk_emo_extra.png);
+}
+body section.demo-box .tabs .tab-online {
+  background-image: url(images/plurk_emo_my.png);
+}
+body section.demo-box .tabs .tab-gallery {
+  background-image: url(images/posterous-spaces-3-32.png);
+}
+body section.demo-box .tabs .tab-favorite {
+  background-image: url(images/star-8-32.png);
+}
+body section.demo-box .tabs .tab-collector {
+  background-image: url(images/eye-3-32.png);
+}
+body section.demo-box .tabs .tab-backup {
+  background-image: url(images/data-backup-32.png);
+}
+body section.demo-box .tabs .tab-settings {
+  background-image: url(images/gear-2-32.png);
+}
+body section.demo-box .tabs .tab-tools {
+  background-image: url(images/wrench-4-32.png);
+}
+body section.container {
+  margin-top: 40px;
+}
+body section.download {
+  text-align: center;
+}
+body section.download a.btn {
+  margin: auto;
+  background: #D22E3F;
+  border-color: #D22E3F;
+  color: #FFF;
+  margin: 25px;
+  box-shadow: 0 0 2px 0 #D22E3F, inset 0 0 2px 0 #D22E3F;
+}
+body section.download a.btn:hover {
+  text-shadow: 0 0 2px #FFF;
+}
+body .figure {
+  padding: 10px;
+  border: 1px solid #D22E3F;
+  display: inline-block;
+}
+body footer {
+  border-top: #D22E3F 1px solid;
+  margin-top: 60px;
+  padding: 30px;
+  text-align: center;
+}
+body .features .feature {
+  position: relative;
+  min-height: 150px;
+  padding: 20px;
+}
+body .features .feature i[class*="icon-"] {
+  font-size: 4em;
+  float: left;
+  margin: 10px 20px;
+}
+body article.backup-cloud .progress {
+  height: 8px;
+  width: 200px;
+  position: relative;
+  background: #D22E3F;
+  overflow: visible;
+  box-shadow: rgba(210, 46, 63, 0.8) 0 0 2px 0px;
+}
+body article.backup-cloud .progress:after {
+  content: ' ';
+  display: block;
+  width: 10px;
+  height: 8px;
+  position: absolute;
+  right: -5px;
+  top: 0;
+  border-radius: 40%;
+  background: #D22E3F;
+  box-shadow: rgba(210, 46, 63, 0.9) 2px 0 4px 2px;
+}
+@media screen and (max-width: 500px) {
+  .demo-box {
+    zoom: 0.7;
+  }
+}
+@media screen and (max-width: 400px) {
+  .demo-box {
+    zoom: 0.6;
+  }
+}

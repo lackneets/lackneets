@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+
+  RewriteOptions inherit
+
+  # lackneets.tw => pcustoms.lackneets.tw
+  # RewriteCond %{HTTP_HOST}  ^lackneets.tw [nocase]
+  # RewriteRule ^(.*)$        http://pcustoms.lackneets.tw/$1 [last,redirect=301]
+
+</IfModule>
