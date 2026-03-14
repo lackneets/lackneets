@@ -47,6 +47,21 @@ $(function(){
 
 });
 
+window.heroBackgroundImage = null;
+window.generateRainGlass = function(image){
+  if(!image || !$('.background-glass')[0]) return;
+  var engine = new RainyDay({
+    image: image,
+    width: image.clientWidth * .8,
+    height: image.clientHeight * .8,
+    parentElement: $('.background-glass')[0],
+    gravityAngle: Math.PI * 0.7
+  });
+  engine.rain([ [1, 3, 10] ]);
+  engine.rain([ [1, 2, 0.8], [3, 3, 0.2], [8, 1, 0.05] ], 120);
+  $('.background-glass').append(image);
+};
+
 // Boot
 $(function(){
 
@@ -70,7 +85,8 @@ $(function(){
 
   onBackgroundLoad(document.getElementsByClassName('background')[0], function(){
     loaderHero = true;
-    // isMobile() || detectIE() || generateRainGlass(this);
+    window.heroBackgroundImage = this;
+    // isMobile() || detectIE() || window.generateRainGlass(window.heroBackgroundImage);
     // isMobile() || detectIE() || effectLighting();
   });
 
@@ -127,20 +143,6 @@ $(function(){
     setTimeout(rotateAirplanes, 40 * 1000);
   }
 
-
-  function generateRainGlass(image){
-    var engine = new RainyDay({
-      image: image,
-      width: image.clientWidth * .8,
-      height: image.clientHeight * .8,
-      parentElement: $('.background-glass')[0],
-      gravityAngle: Math.PI * 0.7
-    });
-    engine.rain([ [1, 3, 10] ]);
-    engine.rain([ [1, 2, 0.8], [3, 3, 0.2], [8, 1, 0.05] ], 120);
-    $('.background-glass').append(image);
-  }
-
 });
 
 
@@ -184,7 +186,7 @@ $(function(){
         }
         if(meter.fps >= 60){
           $('html').addClass('high-performance');
-          isMobile() || detectIE() || generateRainGlass(this);
+          isMobile() || detectIE() || (window.heroBackgroundImage && window.generateRainGlass(window.heroBackgroundImage));
           isMobile() || detectIE() || effectLighting();
         }
       }
