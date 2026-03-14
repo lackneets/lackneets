@@ -15,7 +15,8 @@
 
 - 平常改網站內容 → 改 `stage/` 裡的檔案
 - commit 後 push 到 `main`
-- GitHub Actions 自動把 `stage/` 部署到 GitHub Pages
+- GitHub Actions 會先把 `stage/` 複製成乾淨的 Pages artifact（排除 GitHub Pages 不接受的 symlink / server-side 殘留）
+- 然後自動部署到 GitHub Pages
 
 ---
 
@@ -148,6 +149,18 @@ lackneets.tw
 不要刪掉：
 
 - `stage/.nojekyll`
+
+### GitHub Pages artifact 例外項目
+
+目前 workflow 會在 deploy 前排除這些 `stage/` 內的 symlink / 非靜態殘留：
+
+- `stage/tubetunnel`
+- `stage/cloud`
+- `stage/invoice`
+- `stage/babel.php`
+- `stage/lessc.php`
+
+原因：GitHub Pages artifact 不接受這些 symlink 類內容，會讓 `upload-pages-artifact` 直接失敗。
 
 ---
 
