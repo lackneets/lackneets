@@ -8,9 +8,11 @@ window.isMobile = function() {
 
 window.detectIE = function (){var n=window.navigator.userAgent,r=n.indexOf("MSIE ");if(r>0)return parseInt(n.substring(r+5,n.indexOf(".",r)),10);var e=n.indexOf("Trident/");if(e>0){var i=n.indexOf("rv:");return parseInt(n.substring(i+3,n.indexOf(".",i)),10)}var t=n.indexOf("Edge/");return t>0?parseInt(n.substring(t+5,n.indexOf(".",t)),10):!1}
 
-$.get('https://pcustoms.lackneets.tw/version/', function(v){
-  $('#version-pcustoms').text(v);
-})
+$.get('pcustoms/version.txt', function(v){
+  $('#version-pcustoms').text((v || '').trim() || '-');
+}).fail(function(){
+  $('#version-pcustoms').text('-');
+});
 
 $(function(){
 
