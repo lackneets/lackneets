@@ -1,37 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Lackneets Chang | Front-End Developer</title>
+  <title>Lackneets Chang | Portfolio</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
-  <meta name="og:title" content="Lackneets Chang | Front-End Developer">
+  <meta name="og:title" content="Lackneets Chang | Portfolio (EN)">
   <meta name="og:image" content="https://lackneets.tw/portfolio/assets/ognamecard.png?v=0">
-  <!-- <meta name="og:image" content="https://lackneets.tw/portfolio/assets/profile-pic.jpg"> -->
 
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,900,100,300' rel='stylesheet' type='text/css'>
-  <!-- <link rel="stylesheet" href="vendor/devicon/devicon.min.css"> -->
-  <!-- <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"> -->
-
-  <link rel="stylesheet" type="text/css" href="vendor/fontello/css/fontello.css">
-  <link rel="stylesheet" type="text/css" href="vendor/fontello/css/animation.css">
 
   <link rel="stylesheet" type="text/css" href="portfolio.css">
   <link rel="stylesheet" type="text/css" href="portfolio-mobile.css">
 
-  <!--<script src='https://www.google.com/jsapi'></script>-->
   <script type="text/javascript" src="vendor/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="vendor/jquery-scrollTo/jquery.scrollTo.js"></script>
   <script type="text/javascript" src="vendor/jquery-lazy-load-xt/src/jquery.lazyloadxt.js"></script>
   <script type="text/javascript" src="vendor/jquery-lazy-load-xt/src/jquery.lazyloadxt.video.js"></script>
 
   <script type="text/javascript" src="portfolio.js"></script>
-
-  <!--
-  <link rel="stylesheet" href="//www.owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="//www.owlcarousel.owlgraphic.com/assets/owlcarousel/assets/owl.theme.default.min.css">
-  <script src="//www.owlcarousel.owlgraphic.com/assets/owlcarousel/owl.carousel.js"></script>
-  -->
 
   <link rel="stylesheet" href="vendor/jquery-owlCarousel/owl-carousel/owl.carousel.css">
   <link rel="stylesheet" href="vendor/jquery-owlCarousel/owl-carousel/owl.theme.css">
@@ -41,11 +29,16 @@
   <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-33652.js"></script>
 
 </head>
+
 <body>
 
   <input type="checkbox" name="toggle" id="toggleSideMenu" />
-  <label for="toggleSideMenu"></label>
-  <a href="zh" class="toggle-language">中文</a>
+  <label for="toggleSideMenu">
+    <i class="icon-menu"></i>
+    <i class="icon-cancel"></i>
+  </label>
+
+  <a href="index.html" class="toggle-language">中文</a>
 
   <div class="timeline-scroller">
   </div>
@@ -55,12 +48,19 @@
     <div class="entry module" id="about-me">
       <div class="entry-wrapper">
         <h3 class="anchor" id="Profile"></h3>
-        <img class="entry-img profile-pic" src="assets/p500.jpg">
+        <img class="entry-img profile-pic" src="assets/profile-pic.jpg" />
         <h3 class="profile-name">Lackneets Chang</h3>
+        <h3 class="profile-name nickname"><small style="font-size:0.7em; color: #DDD;font-weight: 100;">
+            <span>aka Dr. Xiao-Yao</span>
+          </small></h3>
+
         <article class="story">
           <center>
-            <h4>Senior Front-End Developer</h4>
-            <p>From backend to frontend, more than 4 years experience in web development and Javascript. Started coding since 2004 with Flash and Actionscript. Full of passion in creating interactive stuff and trying new technologies</p>
+            <h4><small>Software Designer &</small> <br>Lead Full Stack Engineer</h4>
+            <p class="center-block saying">
+              I turn interactive websites into ideas<span class="mobile-newline">,</span>
+              and make imagination tangible as fast as possible<span class="mobile-newline">.</span>
+            </p>
           </center>
         </article>
       </div>
@@ -70,20 +70,19 @@
 
       <div class="entry-wrapper">
 
-        <p>I usually work with...</p>
+        <p>I work across frontend, backend, and design — the whole stack, with years of hands-on product development experience.</p>
 
         <ul class="devtools">
-          <li class="devtool"><i class="icon-html5" title="HTML5"></i>HTML5</li>
-          <li class="devtool"><i class="icon-css3 colored" title="CSS3"></i>CSS3/LESS</li>
-          <li class="devtool"><i class="icon-jquery" title="jQuery"></i>jQuery</li>
-          <li class="devtool"><i class="icon-nodejs" title="NodeJS"></i>NodeJS</li>
-          <li class="devtool"><i class="icon-react" title="ReactJS"></i>ReactJS</li>
-          <li class="devtool"><i class="icon-sublime" title="Sublime Text"></i>Sublime</li>
-          <li class="devtool"><i class="icon-chrome" title="Chrome"></i>Chrome</li>
-          <li class="devtool"><i class="icon-wordpress" title="Wordpress"></i>Wordpress</li>
-          <!-- <li class="devtool"><i class="icon-flash" title="Adobe Flash"></i>Flash</li> -->
-          <li class="devtool"><i class="icon-illustrator" title="Adobe Illustrator"></i>Illustrator</li>
-          <li class="devtool"><i class="icon-photoshop" title="Adobe PhotoShop"></i>PhotoShop</li>
+          <li class="devtool"><i class="icon-html5" title="HTML5"></i><a href="http://www.w3schools.com/html/html5_intro.asp">HTML5</a></li>
+          <li class="devtool"><i class="icon-css3 colored" title="CSS3"></i><a href="http://less2css.org/">CSS3/LESS</a></li>
+          <li class="devtool"><i class="icon-jquery" title="jQuery"></i><a href="https://jquery.com/">jQuery</a></li>
+          <li class="devtool"><i class="icon-nodejs" title="NodeJS"></i><a href="https://nodejs.org/">NodeJS</a></li>
+          <li class="devtool"><i class="icon-react" title="ReactJS"></i><a href="https://facebook.github.io/react/">ReactJS</a></li>
+          <li class="devtool"><i class="icon-octobercms" title="OctoberCMS"></i><a href="https://octobercms.com/">OctoberCMS</a></li>
+          <li class="devtool"><i class="icon-chrome" title="Chrome Extensions Development"></i><a href="https://developer.chrome.com/extensions">Chrome</a></li>
+          <li class="devtool"><i class="icon-sublime" title="Sublime Text"></i><a href="https://www.sublimetext.com/">Sublime Text</a></li>
+          <li class="devtool"><i class="icon-illustrator" title="Adobe Illustrator"></i><a>Illustrator</a></li>
+          <li class="devtool"><i class="icon-photoshop" title="Adobe PhotoShop"></i><a>PhotoShop</a></li>
         </ul>
 
       </div>
@@ -91,8 +90,63 @@
 
     <div class="entry stream">
       <div class="entry-wrapper">
-        <h3 class="anchor" id="Feature Works"></h3>
-        <h3 id="Locate">Locate</h3>
+        <h3 class="anchor" id="Signature Works"></h3>
+        <h3 id="plurkcustoms">PlurkCustoms</h3>
+        <div class="dev-tools">
+          <i class="icon-html5"></i>
+          <i class="icon-css3"></i>
+          <i class="icon-chrome"></i>
+        </div>
+        <small class="project-year">2011 - 2016</small>
+        <div class="entry-media">
+          <video preload="none" data-poster="projects/others/pcustoms-1280-min.png">
+            <source src="projects/others/pcustoms.m4v" type="video/mp4" />
+          </video>
+        </div>
+        <article class="story">
+          <p>
+            PlurkCustoms started from a very personal need and eventually grew into one of my most representative community products. It began as a way to overcome the limits and friction of Plurk custom emoticons, then gradually evolved into a more complete toolset with emoticon management, faster input, backup support, and a much smoother workflow.
+          </p>
+          <p>
+            This project matters to me because it was the first time I deeply felt that a seemingly tiny user pain point — if identified precisely and solved cleanly — can grow into something people rely on for years. It became an everyday extension for many Plurk users, and it pushed me to think more seriously about product evolution, usability, and maintenance cost.
+          </p>
+          <p>
+            <a class="external-link" href="/pcustoms/" target="_blank">PlurkCustoms</a>
+            ｜ Source: <a class="external-link" href="https://github.com/lackneets/PlurkCustoms" target="_blank">GitHub/PlurkCustoms</a>
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
+        <h3>KarmaPolice</h3>
+        <div class="dev-tools">
+          <i class="icon-php" title="PHP"></i>
+          <i class="icon-mysql" title="MySQL"></i>
+          <i class="icon-sphinx" title="Sphinx Search Engine"></i>
+        </div>
+        <small class="project-year">2010 - 2011</small>
+        <div class="entry-media">
+          <img data-src="projects/karma/karma-min.png">
+        </div>
+        <article class="story" style="">
+          <p>
+            KarmaPolice is one of the most representative personal projects from my early years. It started as a bot I built for my own online work and server operations, then gradually evolved into a public-facing character that interacted with large groups of users and even developed a distinct personality and community culture.
+          </p>
+          <p>
+            In its time, it was not merely a reply bot. It was a system with Chinese conversational logic, multi-turn interaction, and a very deliberate sense of character. Watching it grow from a private utility into something people remembered, built on together, and even remixed left a deep impression on me. I see it less as a technical demo and more as a digital character that genuinely lived inside a community.
+          </p>
+          <p>
+            What makes KarmaPolice important is not only that it was early, or technically ambitious, but that it brought together utility, interaction, and character. If there is any project that best represents my early imagination around interactive products, community participation, and digital character design, this is definitely one of them.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
+        <h3 id="locate">Locate</h3>
         <div class="dev-tools">
           <i class="icon-html5"></i>
           <i class="icon-css3"></i>
@@ -102,8 +156,8 @@
         </div>
         <small class="project-year">2015</small>
         <div class="entry-media">
-          <video  loop autoplay data-poster="projects/locate/locate-640-min.png">
-            <source data-src="projects/locate/locate-demo.m4v" type="video/mp4"/>
+          <video loop autoplay data-poster="projects/locate/locate-640-min.png">
+            <source data-src="projects/locate/locate-demo.m4v" type="video/mp4" />
           </video>
           <div class="mobile-iphone">
             <div class="screen-wrapper">
@@ -113,13 +167,100 @@
         </div>
         <article class="story" style="">
           <p>
-            <a class="external-link" href="http://www.e-mapcode.com/" target="work-locate">Denso Mapcode</a> is helpful when you driving in Japan.
-            <a class="external-link" href="https://www.youtube.com/watch?v=pEfH21cqjFs" target="work-locate">This video</a> shows how to use a japan GPS navigation.
+            <a class="external-link" href="http://www.e-mapcode.com/" target="work-locate">Denso Mapcode</a> is widely used in Japanese car navigation, but travelers often only have a place name or address, which makes the lookup flow awkward.
           </p>
           <p>
-            <a class="external-link" href="//locate.lackneets.tw" target="work-locate">Locate</a>makes an easy way to check both address and Mapcode by just input a destination name, the app does the rest thing automatically. This app is written with ReactJS and has high performance to access API directly because data is well-cached both server-side and client-side.
+            Locate compresses that messy process into a single input. You type a destination name, and it gives you both the address and the Mapcode without forcing you to jump between multiple sources. The app was built with ReactJS, with careful attention to caching and API efficiency so the whole experience stays fast and lightweight.
+          </p>
+          <p>
+            To me, Locate is a good example of how I like to build utility products: start with a concrete real-world use case, then reduce the information, workflow, and interface into something direct and genuinely useful.<br>
+            <a class="external-link" href="//locate.lackneets.tw" target="work-locate">Visit Locate</a>
           </p>
         </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
+        <h3 id="sheepy">Sheepy Web Cloner</h3>
+        <div class="dev-tools">
+          <i class="icon-html5"></i>
+          <i class="icon-chrome"></i>
+        </div>
+        <small class="project-year">2011-2015</small>
+        <div class="entry-media">
+          <video loop preload="none" data-poster="projects/sheepy/sheepy-640-min.png">
+            <source data-src="projects/sheepy/sheepy-demo.m4v" type="video/mp4" />
+          </video>
+        </div>
+        <article class="story" style="">
+          <p>
+            Sheepy is a personal project I have always loved. It was never meant to be just another “save webpage” tool. Its goal was to preserve the actual state a user was looking at, so that dynamic pages, logged-in views, and even parts of web apps could be carried around and reproduced later.
+          </p>
+          <p>
+            The project began with a question about the limits of browser-side persistence. If conventional saving cannot truly preserve interactive state, could there be an approach closer to “visual snapshot + packaged state”? Sheepy was born from that idea. It is especially useful for things like booking and ticketing result pages: when you want to preserve the full result faithfully, but PDF tends to break layouts and screenshots cannot capture the whole page cleanly.
+          </p>
+          <p>
+            It is very much my style: start from a technical problem people rarely address directly, find a method that actually works, then package it into something ordinary users can understand and use. To me, this is not just a browser extension — it is a concrete experiment in web portability. Source: <a class="external-link" href="https://github.com/lackneets/chrome-sheepy" target="_blank">GitHub/chrome-sheepy</a>
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
+        <h3 class="anchor" id="Company & Organizations"></h3>
+        <h3>Eatgo Booking System</h3>
+        <div class="dev-tools">
+          <i class="icon-html5"></i>
+          <i class="icon-css3"></i>
+          <i class="icon-mobile"></i>
+          <i class="icon-rails"></i>
+          <i class="icon-backbonejs"></i>
+        </div>
+        <small class="project-year">2014 - 2015</small>
+        <div class="entry-media">
+          <video preload="none" data-poster="projects/eatgo/video-min.png">
+            <source src="projects/eatgo/video.m4v" type="video/mp4" />
+          </video>
+          <span class="video-play"></span>
+        </div>
+        <article class="story">
+          <p>
+            During my time at Eatgo, I worked on the customer-facing booking system and kept expanding it as the business grew. What started as a basic reservation flow for a small number of listings gradually evolved into a system that could handle multiple room types, add-on services, different property rules, and synchronized booking across several rooms.
+          </p>
+          <p>
+            The challenge was not simply to build a booking flow, but to keep the system usable, adaptable, and extensible while business rules changed constantly. Beyond the customer-facing experience, I also worked on management-side improvements such as room operations, batch actions, and calendar synchronization, making daily workflows smoother for both operators and customer service.
+          </p>
+          <p>
+            It is not a flashy demo project, but it represents well how I handle real business requirements: taking a product surrounded by constraints, exceptions, and operational pressure, then steadily shaping it into a more reliable system.
+          </p>
+        </article>
+        <div class="owl-carousel" data-slick='{"slidesToShow": 3, "slidesToScroll":2, "centerMode": false, "infinite": true, "speed": 600}'>
+          <div>
+            <img class="lazyOwl" data-src="projects/eatgo/booking-detail.png">
+            <h5>Book multiple rooms in one order</h5>
+          </div>
+          <div>
+            <img class="lazyOwl" data-src="projects/eatgo/booking-cars2.png">
+            <h5>Add-on services (car rental)</h5>
+          </div>
+          <div>
+            <img class="lazyOwl" data-src="projects/eatgo/admin-news.png">
+            <h5>Admin dashboard</h5>
+          </div>
+          <div>
+            <img class="lazyOwl" data-src="projects/eatgo/admin-rooms.png">
+            <h5>Room operations (support & hosts)</h5>
+          </div>
+          <div>
+            <img class="lazyOwl" data-src="projects/eatgo/admin-batch.png">
+            <h5>Batch room management</h5>
+          </div>
+          <div>
+            <img class="lazyOwl" data-src="projects/eatgo/logo-w.png">
+          </div>
+        </div>
       </div>
     </div>
 
@@ -135,8 +276,8 @@
         </div>
         <small class="project-year">2015</small>
         <div class="entry-media">
-          <video  loop autoplay data-poster="projects/node-cafe/cafe-640-min.jpg">
-            <source data-src="projects/node-cafe/cafe-demo.m4v" type="video/mp4"/>
+          <video loop autoplay data-poster="projects/node-cafe/cafe-640-min.jpg">
+            <source data-src="projects/node-cafe/cafe-demo.m4v" type="video/mp4" />
           </video>
           <div class="mobile-iphone">
             <div class="screen-wrapper">
@@ -146,124 +287,13 @@
         </div>
         <article class="story" style="">
           <p>
-            <a class="external-link" href="//cafe-works.lackneets.tw/" target="_blank">This site</a> 
-            lists out cooperated cafe shops and you can search via lines of TaipeiMRT or shop's feature, see information and share to FB. Mobile version is much simplified, only shows near shops and you can tap it to open navigation in map app. Data is easy managed in Google Spreadsheet. 
+            Eatgo Cafe is a mobile-oriented cafe discovery site that organizes partner coffee shops and lets people filter them by MRT line, shop features, and other practical criteria. The desktop version offers fuller browsing and sharing, while the mobile version is intentionally simplified to focus on nearby shops and quick navigation.
           </p>
-        </article>
-      </div>
-    </div>
-
-    <div class="entry stream">
-      <div class="entry-wrapper">
-        <h3>Eatgo Booking System</h3>
-        <div class="dev-tools">
-          <i class="icon-html5"></i>
-          <i class="icon-css3"></i>
-          <i class="icon-mobile"></i>
-          <i class="icon-rails"></i>
-          <i class="icon-backbonejs"></i>
-        </div>
-        <small class="project-year">2014 - 2015</small>
-        <div class="entry-media">
-          <video preload="none" data-poster="projects/eatgo/video-min.png">
-            <source data-src="projects/eatgo/video.m4v" type="video/mp4"/>
-          </video>
-          <span class="video-play"></span>
-        </div>
-        <article class="story">
           <p>
-            While I worked at Eatgo Travel Co, We were developing an online booking system for villas to fit their special services and different rules, and make it be simpler for customers. Also, a user-friendly backstage with affordance designed is important for villa owner, because they are usually aged, that was challenged.
+            What I like about this project is that it was not about stuffing in more information, but about making the right trade-offs for the usage context. When people are outside looking for a cafe, they want speed, clarity, and fewer taps, so I kept the interface light and focused.
           </p>
-        </article>
-        <div class="owl-carousel" data-slick='{"slidesToShow": 3, "slidesToScroll":2, "centerMode": false, "infinite": true, "speed": 600}'>
-          <div>
-            <img class="lazyOwl" data-src="projects/eatgo/booking-detail.png">
-            <h5>Flexible booking system</h5>
-          </div>
-          <div>
-            <img class="lazyOwl" data-src="projects/eatgo/booking-cars2.png">
-            <h5>Suite car rental</h5>
-          </div>     
-          <div>
-            <img class="lazyOwl" data-src="projects/eatgo/admin-news.png">
-            <h5>Backstage system</h5>
-          </div> 
-          <div>
-            <img class="lazyOwl" data-src="projects/eatgo/admin-rooms.png">
-            <h5>Rooms management</h5>
-          </div>
-          <div>
-            <img class="lazyOwl" data-src="projects/eatgo/admin-batch.png">
-            <h5>Batch management</h5>
-          </div>
-          <div>
-            <img class="lazyOwl" data-src="projects/eatgo/logo-w.png">
-          </div>  
-        </div>
-      </div>
-    </div>
-
-    <div class="entry stream">
-      <div class="entry-wrapper">
-        <!-- <h3 class="anchor" id="Plurk"></h3> -->
-        <h3>噗浪卡卡</h3>
-        <div class="dev-tools">
-          <i class="icon-html5"></i>
-          <i class="icon-css3"></i>
-          <i class="icon-chrome"></i>
-        </div>
-        <small class="project-year">2011 - 2015</small>
-        <div class="entry-media">
-          <video loop autoplay data-poster="projects/others/pcustoms-min.png">
-            <source data-src="projects/others/pcustoms.m4v" type="video/mp4"/>
-          </video>
-        </div>
-        <article class="story">
           <p>
-            The most powerful 
-            <a class="external-link" href="https://chrome.google.com/webstore/detail/plurkcustoms-噗浪卡卡圖庫/npkllofhoohpldfjaepknfbjbmehjpmc" target="_blank"> Chrome Extension </a>
-            for Plurk breaks through the limitation from 60 emoticons to unlimited, that also improves both user interface and experience. There are more than 40000 plurk users love this!
-          </p>
-        </article>
-      </div>
-    </div>
-
-    <div class="entry stream">
-      <div class="entry-wrapper">
-        <h3>Discover Emoticons</h3>
-        <div class="dev-tools">
-          <i class="icon-nodejs"></i>
-        </div>
-        <small class="project-year">2014</small>
-        <div class="entry-media">
-          <video class="entry-img" loop autoplay data-poster="projects/node-discover/discover-640-min.png">
-            <source data-src="projects/node-discover/discover-demo3.m4v" type="video/mp4"/>
-          </video>
-        </div>
-        <article class="story" style="">
-          <p>An experiment of data mining using Apriori algorithm to Discover related plurk emoticons.</p>
-        </article>
-      </div>
-    </div>  
-
-    <div class="entry stream">
-      <div class="entry-wrapper">
-        <h3>G0V 政治獻金資料庫</h3>
-        <div class="dev-tools">
-          <i class="icon-html5"></i>
-          <i class="icon-css3"></i>
-          <i class="icon-nodejs"></i>
-        </div>
-        <small class="project-year">2014</small>
-        <div class="entry-media">
-          <img src="projects/others/campaign-finance-640-min.png">
-        </div>
-        <article class="story">
-          <p>
-            We transform paper open data of political contributions 
-            <a class="external-link" href="http://ronny.wang/blog/post/40488349" target="_blank">from Taiwan Control Yuan</a>
-            into digital data by power of crowdsourcing. Watch the result 
-            <a class="external-link" href="http://campaign-finance.g0v.lackneets.tw/" target="_blank">we made!</a>
+            The content pipeline was also designed to be easy to maintain through Google Spreadsheet, which kept operational cost low. It is a small product, but it reflects how I usually work: think about the data source, the real usage scenario, and the interface rhythm together before deciding what the product should become.
           </p>
         </article>
       </div>
@@ -280,13 +310,20 @@
         <small class="project-year">2014</small>
         <div class="entry-media">
           <video class="entry-img" loop autoplay data-poster="projects/event-firefly/firefly-640-min.jpg">
-            <source data-src="projects/event-firefly/firefly-demo-640.m4v" type="video/mp4"/>
+            <source data-src="projects/event-firefly/firefly-demo-640.m4v" type="video/mp4" />
           </video>
         </div>
         <article class="story">
           <p>
-            <a class="external-link" href="//works.lackneets.tw/firefly" target="_blank">This event page</a> 
-              with particle lights was made in Eatgo, this page shows where are fireflies and nearby villas..
+            Firefly Map is an interactive campaign page built around a seasonal event. It combines map interaction, regional navigation, and curated destination information so people can explore firefly viewing spots and nearby accommodation more intuitively.
+          </p>
+          <p>
+            The core idea was not just to place information on a website, but to turn browsing into a more natural discovery flow: start from a region, then move into points of interest and lodging content. That made the guide feel less like a static list and more like how people actually think while planning a trip.
+          </p>
+          <p>
+            Although it was not a huge project, it represents my way of building content-driven pages: compressing information architecture, interaction design, and visual presentation into something useful and memorable within a tight schedule and a clear commercial goal.<br>
+            <a class="external-link" href="/eatgo/firefly/" target="_blank">View page</a>
+            ｜ <a class="external-link" href="https://github.com/qcl/jQuery-jVectorMap-TaiwanMap" target="_blank">jVectorMap Taiwan</a>
           </p>
         </article>
       </div>
@@ -294,97 +331,56 @@
 
     <div class="entry stream">
       <div class="entry-wrapper">
-        <h3>KarmaPolice 卡馬警衛</h3>
+        <h3 id="yahoo-campaign">Yahoo Shopping Campaigns</h3>
         <div class="dev-tools">
-          <i class="icon-php" title="PHP"></i>
-          <i class="icon-mysql" title="MySQL"></i>
-          <i class="icon-sphinx" title="Sphinx Search Engine"></i>
+          <i class="icon-html5"></i>
+          <i class="icon-css3"></i>
+          <i class="icon-octobercms"></i>
+          <i class="icon-mysql"></i>
         </div>
-        <small class="project-year">2010 - 2011</small>
+        <small class="project-year">2016</small>
         <div class="entry-media">
-          <img data-src="projects/karma/karma-min.png">
+          <img data-src="projects/yahoo/yslots-640.png">
         </div>
-<!--         <div class="owl-carousel">
-          <div>
-            <img class="lazyOwl" data-src="projects/karma/chat-weather.png" style="object-fit:contain">
-            <h5>天氣預報</h5>
-          </div>
-          <div>
-            <img class="lazyOwl" data-src="projects/karma/chat.png" style="object-fit:contain">
-            <h5>閒聊</h5>
-          </div>
-          <div>
-            <img class="lazyOwl" data-src="projects/karma/chat-invoice.png" style="object-fit:contain">
-            <h5>對發票</h5>
-          </div>
-          <div>
-            <img class="lazyOwl" data-src="projects/karma/chat-flat.png" style="object-fit:contain">
-            <h5>推齊</h5>
-          </div>
-        </div> -->
         <article class="story" style="">
           <p>
-            An autoresponder bot based on Plurk provides various interaction service with self-developed Chinese NLP parser. There were over 50000 fans used to love this and KarmaPolice had also been published as doujin-comics.
-             
-            <a class="external-link" href="http://blog.lackneets.tw/2011/05/karmapolice-client-user-manual.html" target="_blank">Manual has more detail.</a>
+            Projects like Yahoo Shopping campaigns feel to me like training in commercial execution rhythm. They do not carry the same long technical narrative as personal products, but they are excellent tests of how quickly you can digest requirements and land the page accurately within a fixed platform, schedule, and campaign objective.
           </p>
-          <p>KarmaPolice is no more maintained now.</p>
+          <p>
+            These projects usually require planning translation, visual integration, frontend implementation, and campaign-detail handling in a short time. The goal is not to build a huge system, but to turn business messaging, user actions, and page pacing into something clear and effective.
+          </p>
+          <p>
+            It may not be the most personal work in this portfolio, but it shows another side of me in commercial projects: delivering solid work consistently in an environment with clear constraints and fast tempo.
+          </p>
         </article>
       </div>
-    </div> 
+    </div>
 
     <div class="entry stream">
       <div class="entry-wrapper">
-        <h3>Codeshare</h3>
+        <h3>g0v Political Contribution Database</h3>
         <div class="dev-tools">
           <i class="icon-html5"></i>
           <i class="icon-css3"></i>
-          <i class="icon-php"></i>
+          <i class="icon-nodejs"></i>
         </div>
-        <small class="project-year">2011</small>
+        <small class="project-year">2014</small>
         <div class="entry-media">
-          <!-- 
-          <video preload="none" data-poster="projects/codeshare/emoviz-640-min.png">
-            <source data-src="projects/codeshare/emoviz.m4v" type="video/mp4"/>
-          </video> 
-          <span class="video-play"></span>
-          -->
-          <img src="projects/codeshare/codeshare-640-min.png">
-          
+          <img src="projects/others/campaign-finance-640-min.png">
         </div>
-        <article class="story" style="">
+        <article class="story">
           <p>
-            Codeshare is my major graduate project creates an online environment testing and learning from backend to frontend. There are many CSS and PHP courses, and everyone can create their own one.
+            The g0v Political Contribution Database is one of my representative civic-tech collaborations. The heart of the project was turning political contribution records that originally existed on paper into searchable, analyzable digital data through image slicing, crowdsourced recognition, and structured data cleanup.
           </p>
-        </article>        
-      </div>
-    </div>  
-
-    <div class="entry stream">
-      <div class="entry-wrapper">
-        <h3>EmotionViz 聲色場所</h3>
-        <div class="dev-tools">
-          <i class="icon-html5"></i>
-          <i class="icon-css3"></i>
-          <i class="icon-flash"></i>
-          <i class="icon-php"></i>
-        </div>
-        <small class="project-year">2010</small>
-        <div class="entry-media">
-          <video preload="none" data-poster="projects/emoviz/emoviz-640-min.png">
-            <source data-src="projects/emoviz/emoviz.m4v" type="video/mp4"/>
-          </video>
-          <span class="video-play"></span>
-        </div>
-        <article class="story" style="">
           <p>
-            One of my graduate projects, Different to most social media, this is a voice-based social network and expresses emotion with colors. We record and compress voice on the browser with the latest technique of Flash, that was called 
-            <a class="external-link" href="http://labs.adobe.com/technologies/alchemy/" target="_blank">Alchemy</a>
-            only in Flash 10.1 beta version.
+            This project was meaningful to me because it was not just website development. It sat at the intersection of information structuring, collaborative workflow, and public issues. It made me understand more concretely that technology is not only for products — it can also make data more transparent and public discussion more grounded.
           </p>
-        </article>        
+          <p>
+            Source: <a class="external-link" href="https://github.com/lackneets/campaign-finance" target="_blank">GitHub/campaign-finance</a>
+          </p>
+        </article>
       </div>
-    </div> 
+    </div>
 
     <div class="entry stream">
       <div class="entry-wrapper">
@@ -397,37 +393,20 @@
         <small class="project-year">2013</small>
         <div class="entry-media">
           <video loop autoplay data-poster="projects/node-bookmark/bookmark-640-min.png">
-            <source data-src="projects/node-bookmark/bookmark-demo-640.m4v" type="video/mp4"/>
-          </video>
-        </div>
-        <article class="story">
-          <p>An abandoned project. There was an idea to provide service for saving bookmarks, and share most saved public links from users.</p>
-        </article>
-      </div>
-    </div>
-
-    <div class="entry stream">
-      <div class="entry-wrapper">
-        <h3>台北景點好手氣</h3>
-        <div class="dev-tools">
-          <i class="icon-nodejs"></i>
-        </div>
-        <small class="project-year">2014</small>
-        <div class="entry-media">
-          <video loop autoplay data-poster="projects/node-lucky/lucky-640-min.png">
-            <source data-src="projects/node-lucky/lucky-demo.m4v" type="video/mp4"/>
+            <source data-src="projects/node-bookmark/bookmark-demo-640.m4v" type="video/mp4" />
           </video>
         </div>
         <article class="story">
           <p>
-            This is a prototype of side project in Eatgo. This prototype provides
-            <a class="external-link" href="//lucky.lackneets.tw/taipei/lucky/%E5%8F%B0%E5%8C%97101/%E8%A5%BF%E9%96%80%E7%B4%85%E6%A8%93" target="_blank">RESTful API</a>
-            generating random routes between tourist attractions. This app combines route from known route using A-star algorithm
+            Cloud Bookmark is a small tool that came directly from a real usage need. Its goal was simple: provide a lightweight landing page where users could organize and manage frequently used links instead of leaving bookmarks scattered inside the browser.
+          </p>
+          <p>
+            What made this project interesting was that it naturally extended into website metadata fetching and text-encoding detection. At the time I had to handle pages that were not in Unicode, so I explored more engineering-heavy approaches to infer likely language and encoding types. It was not a big product, but it reflects how I build tools: break the problem down first, then fill in the technical details required to make the tool actually useful.
           </p>
         </article>
       </div>
     </div>
-<!-- 
+
     <div class="entry stream">
       <div class="entry-wrapper">
         <h3>Online Mosaic Design</h3>
@@ -437,17 +416,107 @@
         <small class="project-year">2010</small>
         <div class="entry-media">
           <video loop autoplay data-poster="projects/game-mosaic/mosaic-min.png">
-            <source data-src="projects/game-mosaic/mosaic.m4v" type="video/mp4"/>
+            <source data-src="projects/game-mosaic/mosaic.m4v" type="video/mp4" />
           </video>
         </div>
         <article class="story" style="display:none">
         </article>
       </div>
     </div>
- -->
+
     <div class="entry stream">
       <div class="entry-wrapper">
-        <h3 class="anchor" id="Games"></h3>
+        <h3 class="anchor" id="Experiments"></h3>
+        <h3>Discover Emoticons</h3>
+        <div class="dev-tools">
+          <i class="icon-nodejs"></i>
+        </div>
+        <small class="project-year">2014</small>
+        <div class="entry-media">
+          <video class="entry-img" loop autoplay data-poster="projects/node-discover/discover-640-min.png">
+            <source data-src="projects/node-discover/discover-demo3.m4v" type="video/mp4" />
+          </video>
+        </div>
+        <article class="story" style="">
+          <p>
+            Discover Emoticons was an experimental project extended from a data-mining course, using the Apriori method to explore relationships between Plurk emoticons. It was more of a learning-oriented proof of concept, but it also reflected my interest at the time in data analysis and user behavior patterns.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
+        <h3>Taipei Day Trip Planner</h3>
+        <div class="dev-tools">
+          <i class="icon-nodejs"></i>
+        </div>
+        <small class="project-year">2014</small>
+        <div class="entry-media">
+          <video loop autoplay data-poster="projects/node-lucky/lucky-640-min.png">
+            <source data-src="projects/node-lucky/lucky-demo.m4v" type="video/mp4" />
+          </video>
+        </div>
+        <article class="story">
+          <p>
+            Taipei Day Trip Planner was an experimental tool I conceived while working at Eatgo, inspired by real travel-planning needs. Its purpose was to automatically compose a one-day itinerary and estimate travel time under a set of constraints, turning a mostly manual planning process into a prototype that could be tested quickly.
+          </p>
+          <p>
+            The value was not in being a complete product, but in connecting algorithms, place data, and real travel scenarios into a tool that could genuinely support planning decisions.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
+        <h3>EmotionViz</h3>
+        <div class="dev-tools">
+          <i class="icon-html5"></i>
+          <i class="icon-css3"></i>
+          <i class="icon-flash"></i>
+          <i class="icon-php"></i>
+        </div>
+        <small class="project-year">2010</small>
+        <div class="entry-media">
+          <video preload="none" data-poster="projects/emoviz/emoviz-640-min.png">
+            <source src="projects/emoviz/emoviz.m4v" type="video/mp4" />
+          </video>
+          <span class="video-play"></span>
+        </div>
+        <article class="story" style="">
+          <p>
+            This was a team graduation project completed during my time at design school. Unlike mainstream social media, EmotionViz imagined a community built around voice, with color used as a way to record and express emotional change.
+          </p>
+          <p>
+            When we decided to build it, I did not expect audio recording to become the hardest part. The answer ended up being the then-new Flash 10.1 beta and its <a class="external-link" href="http://labs.adobe.com/technologies/alchemy/" target="_blank">Alchemy</a> technology, which let us use a C-based LAME encoder.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
+        <h3>CodeShare</h3>
+        <div class="dev-tools">
+          <i class="icon-html5"></i>
+          <i class="icon-css3"></i>
+          <i class="icon-php"></i>
+        </div>
+        <small class="project-year">2011</small>
+        <div class="entry-media">
+          <img src="projects/codeshare/codeshare-640-min.png">
+        </div>
+        <article class="story" style="">
+          <p>
+            CodeShare was one of my student graduation projects, created as a learning platform for practicing and testing web development online. It combined instructional design, immediate feedback, and a simple sandbox execution concept. It still clearly looks like a prototype today, but you can already see my long-term interest in how tools can support learning.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="entry stream">
+      <div class="entry-wrapper">
         <h3>Jigsaw</h3>
         <div class="dev-tools">
           <i class="icon-flash"></i>
@@ -455,12 +524,14 @@
         <small class="project-year">2007</small>
         <div class="entry-media">
           <video loop autoplay data-poster="projects/game-jigsaw/jigsaw-demo-min.png">
-            <source data-src="projects/game-jigsaw/jigsaw-demo-nl.m4v" type="video/mp4"/>
+            <source data-src="projects/game-jigsaw/jigsaw-demo-nl.m4v" type="video/mp4" />
           </video>
         </div>
         <article class="story">
           <p><img class="" height="80" data-src="projects/game-jigsaw/jigsaw-cutting-bg.gif"></p>
-          <p> Cut image into random pieces with ActionScript</p>
+          <p>
+            This project had only two real challenges: cutting and assembling. The puzzle pieces were generated by drawing dynamic Bézier curves, then filling them with bitmap textures. To get the snapping effect I wanted, the built-in hitTest was not enough, so I had to implement my own piece management using absolute coordinates. I still remember lying in bed for three nights in a row thinking through the approach before sleep.
+          </p>
         </article>
       </div>
     </div>
@@ -474,84 +545,32 @@
         <small class="project-year">2007</small>
         <div class="entry-media">
           <video class="entry-img" loop autoplay data-poster="projects/game-smart/smart-min.png">
-            <source data-src="projects/game-smart/smart-sd.m4v" type="video/mp4"/>
+            <source data-src="projects/game-smart/smart-sd.m4v" type="video/mp4" />
           </video>
         </div>
         <article class="story">
-          <p>Board game with competitive AI competition</p>
+          <p>This is a simple implementation of the classic pencil-and-paper game Dots and Boxes. The fun of the AI lay in turning human decision patterns into program logic — with the difference that the computer can evaluate every possibility in a fraction of a second. And of course, beyond brute evaluation, there is always the more interesting layer: strategy.</p>
         </article>
       </div>
     </div>
 
-
     <div class="entry stream">
       <div class="entry-wrapper">
-        <h3 class="anchor" id="Other Works"></h3>
         <h3>Other Works</h3>
-        <article class="story">
-          <p>I also built many small business websites with Wordpress, and more other things.....</p>
-        </article>
-        <div class="dev-tools">
-          <i class="icon-html5"></i>
-          <i class="icon-wordpress"></i>
-          <i class="icon-flash"></i>
-        </div>
+
         <div class="owl-carousel" data-slick='{"slidesToShow": 3, "slidesToScroll":2, "centerMode": false, "infinite": true, "speed": 600}'>
+          <div>
+            <a target="_blank">
+              <img class="lazyOwl" data-src="projects/others/ha-esp.jpg">
+            </a>
+            <h5>Home Automation</h5>
+          </div>
           <div>
             <a target="_blank">
               <img class="lazyOwl" data-src="projects/others/arduino-min.jpg">
             </a>
-            <h5>Playing Arduino with NodeJS</h5>
-          </div>  
-          <div>
-            <a href="//www.npmjs.com/package/express-beautify" target="_blank">
-              <img class="lazyOwl" data-src="projects/others/npm-640-min.png">
-            </a>
-            <h5>Some Nodejs packages</h5>
-          </div>                  
-          <div>
-            <a href="//ghl.yuntech.edu.tw" target="_blank">
-              <img class="lazyOwl" data-src="projects/others/wp-ghl-640-min.png">
-            </a>
-            <h5>雲林科技大學休閒所</h5>
+            <h5>ESP / Electronics Prototyping</h5>
           </div>
-          <div>
-            <a href="http://yts2015.webevn.net/contest/" target="_blank">
-              <img class="lazyOwl" data-src="projects/others/wp-yts2015-640-min.png">
-            </a>
-            <h5>雲林縣政府創意宣導標語活動網站</h5>
-          </div>
-          <div>
-            <a href="http://www.liquidcooler.com.tw/" target="_blank">
-              <img class="lazyOwl" data-src="projects/others/wp-liqudcooler-640-min.png">
-            </a>
-            <h5>全粒綠能科技</h5>
-          </div>
-          <div>
-            <a target="_blank">
-              <img class="lazyOwl" data-src="projects/others/mishop-min.png">
-            </a>
-            <h5>米賞線上客製包裝</h5>
-          </div> 
-          <div>
-            <a href="//works.lackneets.tw" target="_blank">
-              <img class="lazyOwl" data-src="projects/others/html-everyfluid-640-min.png">
-            </a>
-            <!--
-            <div class="mobile-iphone">
-              <div class="screen-wrapper">
-                <img class="lazyOwl" data-src="projects/others/html-everyfluid-rwd.png">
-              </div>
-            </div>
-            -->
-            <h5>Everyfluid</h5>
-          </div>
-          <div>
-            <a target="_blank">
-              <img class="lazyOwl" data-src="projects/others/wp-yuga-640-min.png">
-            </a>
-            <h5>YUGA</h5>
-          </div>         
         </div>
       </div>
     </div>
@@ -559,16 +578,15 @@
     <div class="entry module" id="contact">
       <div class="entry-wrapper">
         <h3 class="anchor" id="Contact"></h3>
-        <h3>Get Connected</h3>
 
-        <img class="entry-img profile-pic" data-src="assets/p500-2grey.jpg">
-        
+        <img class="entry-img profile-pic" data-src="assets/about.jpg" style="-webkit-filter: grayscale(0.2) sepia(0.2);">
+
         <article class="story links">
           <a class="link" target="_blank" href="http://www.facebook.com/lackneets"><i class="icon-facebook"></i>Facebook</a>
           <a class="link" target="_blank" href="http://www.flickr.com/photos/lackneets"><i class="icon-flickr"></i>Flickr</a>
           <a class="link" target="_blank" href="http://www.plurk.com/lackneets"><i class="icon-plurk"></i>Plurk</a>
           <a class="link" target="_blank" href="http://www.pixiv.net/member.php?id=3520841"><i class="icon-pixiv"></i>Pixiv</a>
-          <a class="link" target="_blank" href="http://www.github.com/lackneets"><i class="icon-github"></i>Github</a>
+          <a class="link" target="_blank" href="http://www.github.com/lackneets"><i class="icon-github"></i>GitHub</a>
           <a class="link" target="_blank" href="http://tw.linkedin.com/in/lackneets"><i class="icon-linkedin"></i>LinkedIn</a>
           <a class="link my-email" target="_blank"><i class="icon-mail"></i></a>
         </article>
@@ -577,16 +595,14 @@
     </div>
 
   </div>
-  <!--
-  <script type="text/javascript" src="//scrollrevealjs.org/js/scrollReveal.min.js?ver=2.1.0"></script>
-  <script type="text/javascript">window.sr = new scrollReveal();</script>
-  -->
 
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-69811083-1', 'auto');
     ga('send', 'pageview');
@@ -594,4 +610,5 @@
   </script>
 
 </body>
+
 </html>
