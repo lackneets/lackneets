@@ -1,6 +1,24 @@
 Font license info
 
 
+## Fontelico
+
+   Copyright (C) 2012 by Fontello project
+
+   Author:    Crowdsourced, for Fontello project
+   License:   SIL (http://scripts.sil.org/OFL)
+   Homepage:  http://fontello.com
+
+
+## Font Awesome
+
+   Copyright (C) 2016 by Dave Gandy
+
+   Author:    Dave Gandy
+   License:   SIL ()
+   Homepage:  http://fortawesome.github.com/Font-Awesome/
+
+
 ## Entypo
 
    Copyright (C) 2012 by Daniel Bruce
@@ -10,22 +28,13 @@ Font license info
    Homepage:  http://www.entypo.com
 
 
-## Font Awesome
+## Modern Pictograms
 
-   Copyright (C) 2012 by Dave Gandy
+   Copyright (c) 2012 by John Caserta. All rights reserved.
 
-   Author:    Dave Gandy
-   License:   SIL ()
-   Homepage:  http://fortawesome.github.com/Font-Awesome/
-
-
-## Fontelico
-
-   Copyright (C) 2012 by Fontello project
-
-   Author:    Crowdsourced, for Fontello project
+   Author:    John Caserta
    License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://fontello.com
+   Homepage:  http://thedesignoffice.org/project/modern-pictograms/
 
 
 ## Brandico
@@ -37,12 +46,12 @@ Font license info
    Homepage:  
 
 
-## Modern Pictograms
+## Maki
 
-   Copyright (c) 2012 by John Caserta. All rights reserved.
+   Copyright (C) Mapbox, LCC
 
-   Author:    John Caserta
-   License:   SIL (http://scripts.sil.org/OFL)
-   Homepage:  http://thedesignoffice.org/project/modern-pictograms/
+   Author:    Mapbox
+   License:   BSD (https://github.com/mapbox/maki/blob/gh-pages/LICENSE.txt)
+   Homepage:  http://mapbox.com/maki/
 
 
