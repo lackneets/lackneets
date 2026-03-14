@@ -101,8 +101,12 @@
 .icon-instagram:before {
   content: '';
   font-family: initial;
+  display: inline-block;
   width: 1em;
   height: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  vertical-align: -0.08em;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
