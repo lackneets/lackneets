@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<title>CSS3 SlotsMachine</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+<script>
+window.onerror = function (errorMsg, url, lineNumber) {
+  alert('Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber);
+}
+</script>
+
+<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" href="styles.less.prefix.css">
+
+
+
+<div class="container" style="text-align:center">
+  <h1>slots-machine.js</h1>
+  <small>Powered by CSS3 animation & transition</small>
+  <div class="slots-machine" style="width:320px; height: 250px; margin: 20px auto;">
+    <div class="slot">
+      <ul class="spinner">
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=0" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=1" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=2" alt=""></li>
+     <!--    <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=3" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=4" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=5" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=6" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=7" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=8" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=9" alt=""></li> -->
+      </ul>
+    </div>
+  </div>
+
+  <small>super speed effect on images</small>
+  <div class="slots-machine" style="width:320px; height: 250px; margin:20px auto;" data-height="0.6">
+    <div class="slot">
+      <ul class="spinner">
+        <li><img src="images/01.png" alt=""></li>
+        <li><img src="images/02.png" alt=""></li>
+        <li><img src="images/03.png" alt=""></li>
+        <li><img src="images/04.png" alt=""></li>
+        <li><img src="images/05.png" alt=""></li>
+        <li><img src="images/01.png" alt=""></li>
+        <li><img src="images/02.png" alt=""></li>
+        <li><img src="images/03.png" alt=""></li>
+        <li><img src="images/04.png" alt=""></li>
+        <li><img src="images/05.png" alt=""></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Always 777</h3>
+
+  <div class="slots-machine" style="width:320px; height: 250px; margin: 20px auto;" data-init="[7,7,7]" data-result="[7,7,7]">
+    <div class="slot">
+      <ul class="spinner">
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=0" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=1" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=2" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=3" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=4" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=5" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=6" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=7" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=8" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=9" alt=""></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Many slots</h3>
+
+  <div class="slots-machine" style="width:400px; height: 300px; margin: 20px auto;" data-slots="5">
+    <div class="slot">
+      <ul class="spinner">
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=0" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=1" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=2" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=3" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=4" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=5" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=6" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=7" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=8" alt=""></li>
+        <li><img src="https://placehold.it/300x300/FAFAFA/333333?text=9" alt=""></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script>
+$(function(){
+
+  $('.slots-machine').each(function(){
+    var machine = new SlotsMachine(this, $(this).data('slots'), {
+      init: $(this).data('init'),
+      rowHeight: $(this).data('height')
+    });
+
+    $(this).on('click tochstart', function(){
+      (machine.state == 'stop') ? machine.start() : machine.stop($(this).data('result'));
+    });
+
+    $(this).css('cursor', 'pointer');
+  })
+
+});
+</script>
