@@ -353,6 +353,30 @@ body table.table-works small:nth-child(n+2) {
   padding-left: 5px;
   border-left: 1px solid rgba(200, 200, 200, 0.3);
 }
+body .table-selected-projects td {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+body .table-selected-projects .project-title {
+  font-size: 1.05em;
+  color: rgba(255, 255, 255, 0.95);
+}
+body .table-selected-projects .project-summary {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.55em;
+}
+body .table-selected-projects .project-status {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82em;
+  font-style: italic;
+}
+body .table-selected-projects .project-year {
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+  vertical-align: top;
+  padding-top: 16px;
+}
 body .experience-list {
   font: 13px/25px Arial, sans-serif;
 }
