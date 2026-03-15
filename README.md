@@ -1,8 +1,8 @@
 # Hi, I'm Lackneets Chang
 
-Software Architect & Product Engineer based in Taiwan.
+Senior Full Stack Engineer with a product mindset, based in Taiwan.
 
-I build practical web products at the intersection of engineering, UX, and product thinking — from front-end architecture and interactive experiences to internal tools, content systems, and experimental side projects.
+I build practical web products across front-end, back-end, UX-minded implementation, internal tools, content systems, and experimental side projects.
 
 ## Start here
 
