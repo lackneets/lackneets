@@ -339,6 +339,15 @@ body table.table-works th {
 body table.table-works tr:nth-child(odd) td {
   background-color: rgba(200, 200, 200, 0.1);
 }
+body table.table-works tr.is-deprecated td,
+body table.table-works tr.is-deprecated a,
+body table.table-works tr.is-deprecated small {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+body table.table-works tr.is-deprecated a:hover {
+  color: rgba(255, 255, 255, 0.65) !important;
+  text-shadow: none;
+}
 body table.table-works small:nth-child(n+2) {
   margin-left: 5px;
   padding-left: 5px;
